@@ -6,17 +6,16 @@ const paid = require("../../middleware/subscription");
 const router = express.Router();
 
 /**
- * 🔓 TEST ROUTE (NO AUTH)
- * Use this to confirm Vercel routing works
- * https://your-domain.vercel.app/api/questions/test
+ * TEST ROUTE (PUBLIC)
+ * https://your-domain/api/questions/test
  */
 router.get("/test", (req, res) => {
   res.json({ message: "Questions route works ✅" });
 });
 
 /**
- * 🔐 GET QUESTIONS BY TOPIC (AUTH + PAID)
- * https://your-domain.vercel.app/api/questions/:topicId
+ * REAL QUESTIONS ROUTE (PROTECTED)
+ * https://your-domain/api/questions/:topicId
  */
 router.get("/:topicId", auth, paid, async (req, res) => {
   try {
@@ -28,8 +27,8 @@ router.get("/:topicId", auth, paid, async (req, res) => {
     );
 
     res.json(questions.rows);
-  } catch (error) {
-    console.error("❌ Error fetching questions:", error);
+  } catch (err) {
+    console.error(err);
     res.status(500).json({ error: "Failed to fetch questions" });
   }
 });
