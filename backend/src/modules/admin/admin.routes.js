@@ -11,6 +11,11 @@ const openai = new OpenAI({
 
 const router = express.Router();
 
+/* ✅ ADMIN TEST ROUTE (NO DB, NO AUTH) */
+router.get("/test", (req, res) => {
+  res.json({ message: "Admin route works ✅" });
+});
+
 /* =======================
    SUBJECTS
 ======================= */
