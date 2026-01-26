@@ -68,4 +68,8 @@ router.get("/clinical/:topicId", auth, paid, async (req, res) => {
   res.json(questions.rows);
 });
 
+router.get("/test", (req, res) => {
+  res.json({ message: "Exams route works ✅" });
+});
+
 module.exports = router;
