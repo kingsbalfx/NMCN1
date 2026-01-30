@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f9ff;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #005eff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}

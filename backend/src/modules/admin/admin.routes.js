@@ -25,9 +25,10 @@ router.get("/test", (req, res) => {
 ======================= */
 router.post("/subjects", auth, admin, async (req, res) => {
   try {
-    const pool = require("../../config/db");
+   const getPool = require("../../config/db");
+   
+   const pool = getPool();
 
-    const { name, category } = req.body;
 
     await pool.query(
       "INSERT INTO subjects(name, category) VALUES($1, $2)",
