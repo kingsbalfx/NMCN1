@@ -1,0 +1,29 @@
+module.exports = [
+  {
+    name: "Reproductive Health I",
+    topics: [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ]
+  },
+  {
+    name: "Reproductive Health II",
+    topics: [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ]
+  },
+  {
+    name: "Reproductive Health III",
+    topics: [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ]
+  }
+];

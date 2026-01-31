@@ -1,5 +1,5 @@
 const express = require("express");
-const getPool = require("../../config/db");
+const pool = require("../../config/db");
 const auth = require("../../middleware/auth");
 const paid = require("../../middleware/subscription");
 

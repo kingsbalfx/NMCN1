@@ -11,6 +11,16 @@ export default function Subjects() {
           <li>Medical-Surgical Nursing</li>
           <li>Midwifery</li>
           <li>Community Health Nursing</li>
+          <li>pharmacoly</li>
+          <li>nursing-ethics&laws</li>
+          <li>geriatic-nursing</li>
+          <li>primary-health-care</li>
+          <li>Reproductive-health</li>
+          <li>mental-health/psychiatric-nursing</li>
+          <li>health-economics</li>
+          <li>nutrition&dietetics</li>
+          <li>Fundamentals</li>
+          <li>paediatrics</li>
         </ul>
       </Layout>
     </ProtectedRoute>

@@ -1,10 +1,8 @@
-const { Configuration, OpenAIApi } = require("openai");
+const { OpenAI } = require("openai");
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
-const openai = new OpenAIApi(configuration);
 
 async function generateQuestion({ topic, type, difficulty }) {
   const prompt = `
@@ -23,14 +21,17 @@ Respond strictly in JSON:
 }
 `;
 
-  const response = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt,
-    max_tokens: 400,
+  const response = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    messages: [{
+      role: "user",
+      content: prompt
+    }],
     temperature: 0.7,
+    max_tokens: 400,
   });
 
-  return JSON.parse(response.data.choices[0].text.trim());
+  return JSON.parse(response.choices[0].message.content.trim());
 }
 
 module.exports = { generateQuestion };

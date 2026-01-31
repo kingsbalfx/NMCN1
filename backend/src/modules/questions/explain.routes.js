@@ -9,16 +9,24 @@ const router = express.Router();
  * Generate AI explanation for any question
  */
 router.post("/explain", auth, paid, async (req, res) => {
-  const { question_text } = req.body;
+  try {
+    const { question_text, topic = "General Nursing", difficulty = "medium" } = req.body;
 
-  const explanation = await generateQuestion({
-    topic: "General Nursing", 
-    type: "explanation", 
-    difficulty: "easy", 
-    question: question_text
-  });
+    if (!question_text) {
+      return res.status(400).json({ error: "question_text is required" });
+    }
 
-  res.json(explanation);
+    const explanation = await generateQuestion({
+      topic, 
+      type: "explanation", 
+      difficulty
+    });
+
+    res.json(explanation);
+  } catch (err) {
+    console.error("Explanation generation error:", err);
+    res.status(500).json({ error: "Failed to generate explanation" });
+  }
 });
 
 module.exports = router;

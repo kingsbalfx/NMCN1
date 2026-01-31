@@ -1,0 +1,51 @@
+module.exports = [
+  {
+    name: "Medical/Surgical Nursing I",
+    topics: [
+      "Hypertension and cardiovascular disorders",
+      "Heart failure and shock",
+      "Respiratory diseases (asthma, pneumonia)",
+      "Nursing care of surgical patients",
+      "Preoperative and postoperative care"
+    ]
+  },
+  {
+    name: "Medical/Surgical Nursing II",
+    topics: [
+      "Diabetes mellitus management",
+      "Renal failure and dialysis nursing",
+      "Gastrointestinal disorders",
+      "Liver diseases and hepatitis",
+      "Fluid and electrolyte imbalance"
+    ]
+  },
+  {
+    name: "Medical/Surgical Nursing III",
+    topics: [
+      "Cancer nursing and chemotherapy care",
+      "Hematological disorders",
+      "Immune system diseases",
+      "Burns and wound management",
+      "Pain and palliative care"
+    ]
+  },
+  {
+    name: "Medical/Surgical Nursing IV",
+    topics: [
+      "Neurological disorders (stroke, epilepsy)",
+      "Orthopedic nursing and fractures",
+      "Trauma and emergency surgery",
+      "Arthritis and musculoskeletal diseases"
+    ]
+  },
+  {
+    name: "Medical/Surgical Nursing V",
+    topics: [
+      "Critical care nursing (ICU)",
+      "Mechanical ventilation basics",
+      "Multi-organ failure",
+      "Advanced patient monitoring",
+      "End-of-life care"
+    ]
+  }
+];
