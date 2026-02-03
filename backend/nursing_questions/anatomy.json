@@ -1,0 +1,33 @@
+module.exports = [
+  {
+    name: "Anatomy and Physiology I",
+    topics: [
+      "Cell structure and function",
+      "Tissues of the body",
+      "Musculoskeletal system",
+      "Cardiovascular anatomy",
+      "Blood composition and functions",
+      "Homeostasis and body regulation"
+    ]
+  },
+  {
+    name: "Anatomy and Physiology II",
+    topics: [
+      "Respiratory system anatomy and physiology",
+      "Digestive system processes",
+      "Endocrine glands and hormones",
+      "Renal system and urine formation",
+      "Fluid and electrolyte balance"
+    ]
+  },
+  {
+    name: "Anatomy and Physiology III",
+    topics: [
+      "Nervous system organization",
+      "Brain and spinal cord functions",
+      "Special senses",
+      "Male and female reproductive systems",
+      "Growth and development across lifespan"
+    ]
+  }
+];

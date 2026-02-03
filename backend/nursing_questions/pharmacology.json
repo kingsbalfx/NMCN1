@@ -1,0 +1,30 @@
+module.exports = [
+  {
+    name: "Pharmacology I",
+    topics: [
+      "Principles of pharmacology",
+      "Drug absorption, distribution, metabolism",
+      "Medication safety",
+      "Adverse drug reactions",
+      "Dosage calculations"
+    ]
+  },
+  {
+    name: "Pharmacology II",
+    topics: [
+      "Antibiotics and antimicrobial resistance",
+      "Antimalarial drugs",
+      "Analgesics and anti-inflammatory drugs",
+      "Cardiovascular medications"
+    ]
+  },
+  {
+    name: "Pharmacology III",
+    topics: [
+      "Psychiatric medications",
+      "Emergency drugs and resuscitation drugs",
+      "Toxicology and antidotes",
+      "Drug abuse and dependence"
+    ]
+  }
+];

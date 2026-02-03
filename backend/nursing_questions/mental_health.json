@@ -1,0 +1,13 @@
+module.exports = [
+  {
+    name: "Mental Health/Psychiatric Nursing",
+    topics: [
+      "Depression and mood disorders",
+      "Schizophrenia and psychosis",
+      "Anxiety disorders",
+      "Substance abuse and addiction",
+      "Therapeutic communication",
+      "Psychiatric emergencies"
+    ]
+  }
+];

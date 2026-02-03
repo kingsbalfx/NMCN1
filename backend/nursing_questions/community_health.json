@@ -1,0 +1,38 @@
+module.exports = [
+  {
+    name: "Primary Health Care I",
+    topics: [
+      "Principles of PHC",
+      "Health promotion strategies",
+      "Community diagnosis",
+      "Disease prevention programs"
+    ]
+  },
+  {
+    name: "Primary Health Care II",
+    topics: [
+      "Maternal and child health services",
+      "Immunization schedules",
+      "Family health nursing",
+      "Community-based interventions"
+    ]
+  },
+  {
+    name: "Community Health Nursing I",
+    topics: [
+      "Epidemiology and disease control",
+      "Environmental health",
+      "Communicable diseases",
+      "Public health nursing roles"
+    ]
+  },
+  {
+    name: "Community Health Nursing II",
+    topics: [
+      "School health nursing",
+      "Occupational health nursing",
+      "Home visits and outreach programs",
+      "Community mental health services"
+    ]
+  }
+];
