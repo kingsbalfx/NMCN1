@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria?",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration, which provides energy for cellular functions."
+  },
+  {
+    "id": 2,
+    "topic": "Pharmacology",
+    "subject": "Drug Administration",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows a systematic approach: Assessment (gathering data), Diagnosis (identifying problems), Planning (setting goals), Implementation (carrying out interventions), and Evaluation (assessing outcomes)."
+  },
+  {
+    "id": 3,
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Patient Care",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "The normal body temperature for adults ranges from 36.5°C to 37.5°C (97.7°F to 99.5°F). Temperatures below 36.5°C indicate hypothermia, while above 37.5°C indicate fever."
+  },
+  {
+    "id": 4,
+    "topic": "Community Health Nursing",
+    "subject": "Public Health",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG (Bacillus Calmette-Guérin) vaccine is administered at birth to provide immunity against tuberculosis. It is part of the routine immunization schedule in most countries."
+  },
+  {
+    "id": 5,
+    "topic": "Mental Health Nursing",
+    "subject": "Psychiatric Care",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship, promote trust, and facilitate understanding between the nurse and patient. It is essential for effective patient care."
+  },
+  {
+    "id": 6,
+    "topic": "Reproductive Health",
+    "subject": "Obstetrics",
+    "question": "What is the normal duration of pregnancy from conception?",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from the first day of the last menstrual period (LMP). This is calculated as 280 days or 9 months and 7 days."
+  },
+  {
+    "id": 7,
+    "topic": "Pediatric Nursing",
+    "subject": "Child Care",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "The normal pulse rate for school-age children (6-12 years) is 70-110 beats per minute. This is higher than adults but lower than infants and toddlers."
+  },
+  {
+    "id": 8,
+    "topic": "Ethics and Law",
+    "subject": "Nursing Ethics",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "The four main principles of nursing ethics are Autonomy, Beneficence (doing good), Non-maleficence (avoiding harm), and Justice. Maleficence is the opposite of beneficence and is not a principle to follow."
+  },
+  {
+    "id": 9,
+    "topic": "Health Economics",
+    "subject": "Healthcare Management",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities by creating conditions that allow people to live healthier lives."
+  },
+  {
+    "id": 10,
+    "topic": "Research Methodology",
+    "subject": "Nursing Research",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate the independent variable and control other variables to determine cause-and-effect relationships. This is the gold standard for establishing causality."
+  }
+]

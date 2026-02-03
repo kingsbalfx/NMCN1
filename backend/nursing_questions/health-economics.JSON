@@ -1,0 +1,11 @@
+module.exports = [
+  {
+    id: 201,
+    topic: "Health Economics",
+    subject: "Advanced",
+    question: "What is cost-effectiveness analysis used for in healthcare?",
+    options: { A: "To evaluate clinical skills", B: "To compare costs and outcomes of interventions", C: "To schedule staff", D: "To set patient charges" },
+    correct_answer: "B",
+    explanation: "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  }
+];

@@ -1,0 +1,11 @@
+module.exports = [
+  {
+    id: 501,
+    topic: "Primary Health Care",
+    subject: "Community",
+    question: "Which service is a core component of primary health care?",
+    options: { A: "Specialized surgery", B: "Health education and promotion", C: "Complex cancer therapy", D: "Organ transplantation" },
+    correct_answer: "B",
+    explanation: "Primary health care emphasizes health promotion, education, and community-based services."
+  }
+];

@@ -1,0 +1,11 @@
+module.exports = [
+  {
+    id: 301,
+    topic: "Midwifery",
+    subject: "Maternal-Child",
+    question: "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    options: { A: "Continue observation", B: "Immediate delivery planning and expedite birth", C: "Administer routine vitamins", D: "Discharge home" },
+    correct_answer: "B",
+    explanation: "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  }
+];

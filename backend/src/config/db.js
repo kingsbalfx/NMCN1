@@ -1,11 +1,13 @@
 const { Pool } = require("pg");
 
-if (!process.env.DATABASE_URL) {
-  console.warn("⚠️  DATABASE_URL not set. Using default connection string.");
+const isDemoMode = !process.env.DATABASE_URL;
+
+if (isDemoMode) {
+  console.warn("⚠️  DATABASE_URL not set. Running in DEMO MODE - API will work with mock data");
 }
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || "postgresql://localhost:5432/kingsbal",
+  connectionString: process.env.DATABASE_URL || "postgresql://localhost:5432/kingsbal_demo",
   ssl:
     process.env.NODE_ENV === "production"
       ? { rejectUnauthorized: false }
@@ -15,13 +17,24 @@ const pool = new Pool({
   connectionTimeoutMillis: 5000,
 });
 
-// Error handling
+// Error handling - don't crash on connection issues in demo mode
 pool.on("error", (err) => {
-  console.error("Unexpected error on idle client", err);
+  if (isDemoMode) {
+    console.warn("⚠️  Database error (demo mode):", err.message);
+  } else {
+    console.error("❌ Unexpected error on idle client", err);
+  }
 });
 
 pool.on("connect", () => {
   console.log("✅ Database connected");
 });
+
+// Mock query function for demo mode
+pool.isDemoMode = isDemoMode;
+pool.mockQuery = async (text, values) => {
+  console.log(`📝 Demo mode - simulated query: ${text.substring(0, 50)}...`);
+  return { rows: [], rowCount: 0 };
+};
 
 module.exports = pool;

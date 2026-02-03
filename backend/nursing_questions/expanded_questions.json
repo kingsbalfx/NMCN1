@@ -1,0 +1,2570 @@
+[
+  {
+    "id": "1-1",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 1)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-2",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-3",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-4",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-5",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-6",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 2)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-7",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-8",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-9",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-10",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-11",
+    "question": "undefined (variant 3)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-12"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-13"
+  },
+  {
+    "id": "101-14",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-15",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-16",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 4)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-17",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-18",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-19",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-20"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-21",
+    "question": "undefined (variant 5)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-22"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-23"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-24"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-25"
+  },
+  {
+    "id": "1-26",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 6)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-27",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-28",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-29",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-30",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-31",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 7)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-32",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-33",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-34",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-35",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-36",
+    "question": "undefined (variant 8)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-37"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-38"
+  },
+  {
+    "id": "101-39",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-40",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-41",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 9)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-42",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-43",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-44",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-45"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-46",
+    "question": "undefined (variant 10)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-47"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-48"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-49"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-50"
+  },
+  {
+    "id": "1-51",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 11)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-52",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-53",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-54",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-55",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-56",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 12)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-57",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-58",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-59",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-60",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-61",
+    "question": "undefined (variant 13)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-62"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-63"
+  },
+  {
+    "id": "101-64",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-65",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-66",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 14)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-67",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-68",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-69",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-70"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-71",
+    "question": "undefined (variant 15)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-72"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-73"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-74"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-75"
+  },
+  {
+    "id": "1-76",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 16)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-77",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-78",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-79",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-80",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-81",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 17)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-82",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-83",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-84",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-85",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-86",
+    "question": "undefined (variant 18)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-87"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-88"
+  },
+  {
+    "id": "101-89",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-90",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-91",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 19)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-92",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-93",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-94",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-95"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-96",
+    "question": "undefined (variant 20)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-97"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-98"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-99"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-100"
+  },
+  {
+    "id": "1-101",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 21)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-102",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-103",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-104",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-105",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-106",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 22)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-107",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-108",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-109",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-110",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-111",
+    "question": "undefined (variant 23)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-112"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-113"
+  },
+  {
+    "id": "101-114",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-115",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-116",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 24)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-117",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-118",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-119",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-120"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-121",
+    "question": "undefined (variant 25)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-122"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-123"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-124"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-125"
+  },
+  {
+    "id": "1-126",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 26)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-127",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-128",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-129",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-130",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-131",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 27)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-132",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-133",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-134",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-135",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-136",
+    "question": "undefined (variant 28)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-137"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-138"
+  },
+  {
+    "id": "101-139",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-140",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-141",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 29)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-142",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-143",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-144",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-145"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-146",
+    "question": "undefined (variant 30)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-147"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-148"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-149"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-150"
+  },
+  {
+    "id": "1-151",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 31)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-152",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-153",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-154",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-155",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-156",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 32)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-157",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-158",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-159",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-160",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-161",
+    "question": "undefined (variant 33)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-162"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-163"
+  },
+  {
+    "id": "101-164",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-165",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-166",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 34)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-167",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-168",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-169",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-170"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-171",
+    "question": "undefined (variant 35)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-172"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-173"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-174"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-175"
+  },
+  {
+    "id": "1-176",
+    "topic": "Anatomy and Physiology",
+    "subject": "Fundamentals",
+    "question": "What is the primary function of the mitochondria? (variant 36)",
+    "options": {
+      "A": "Protein synthesis",
+      "B": "Energy production (ATP synthesis)",
+      "C": "DNA replication",
+      "D": "Waste storage"
+    },
+    "correct_answer": "B",
+    "explanation": "Mitochondria are known as the powerhouse of the cell. Their primary function is to produce ATP through cellular respiration."
+  },
+  {
+    "id": "2-177",
+    "topic": "Nursing Fundamentals",
+    "subject": "Fundamentals",
+    "question": "Which of the following is the correct order of steps in the nursing process?",
+    "options": {
+      "A": "Planning, Assessment, Diagnosis, Implementation, Evaluation",
+      "B": "Assessment, Diagnosis, Planning, Implementation, Evaluation",
+      "C": "Diagnosis, Assessment, Planning, Implementation, Evaluation",
+      "D": "Implementation, Assessment, Diagnosis, Planning, Evaluation"
+    },
+    "correct_answer": "B",
+    "explanation": "The nursing process follows: Assessment, Diagnosis, Planning, Implementation, Evaluation."
+  },
+  {
+    "id": "3-178",
+    "topic": "Medical-Surgical Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal range for adult body temperature in Celsius?",
+    "options": {
+      "A": "35.5 - 36.5°C",
+      "B": "36.5 - 37.5°C",
+      "C": "37.5 - 38.5°C",
+      "D": "38.5 - 39.5°C"
+    },
+    "correct_answer": "B",
+    "explanation": "Normal body temperature is 36.5°C to 37.5°C."
+  },
+  {
+    "id": "4-179",
+    "topic": "Community Health Nursing",
+    "subject": "Community",
+    "question": "Which vaccine is administered at birth to prevent tuberculosis?",
+    "options": {
+      "A": "OPV",
+      "B": "BCG",
+      "C": "Pentavalent",
+      "D": "Rotavirus"
+    },
+    "correct_answer": "B",
+    "explanation": "BCG vaccine is administered at birth to provide immunity against tuberculosis."
+  },
+  {
+    "id": "5-180",
+    "topic": "Mental Health Nursing",
+    "subject": "Clinical",
+    "question": "What is the primary goal of therapeutic communication in nursing?",
+    "options": {
+      "A": "To control the patient's behavior",
+      "B": "To establish trust and understanding with the patient",
+      "C": "To diagnose mental illness",
+      "D": "To prescribe medications"
+    },
+    "correct_answer": "B",
+    "explanation": "Therapeutic communication aims to establish a helping relationship and promote trust."
+  },
+  {
+    "id": "6-181",
+    "topic": "Reproductive Health",
+    "subject": "Maternal-Child",
+    "question": "What is the normal duration of pregnancy from conception? (variant 37)",
+    "options": {
+      "A": "38 weeks",
+      "B": "40 weeks",
+      "C": "42 weeks",
+      "D": "36 weeks"
+    },
+    "correct_answer": "B",
+    "explanation": "A normal pregnancy lasts approximately 40 weeks (280 days) from LMP."
+  },
+  {
+    "id": "7-182",
+    "topic": "Pediatric Nursing",
+    "subject": "Clinical",
+    "question": "What is the normal pulse rate range for a school-age child (6-12 years)?",
+    "options": {
+      "A": "70-110 beats per minute",
+      "B": "80-120 beats per minute",
+      "C": "100-160 beats per minute",
+      "D": "60-100 beats per minute"
+    },
+    "correct_answer": "A",
+    "explanation": "Normal pulse rate for school-age children is 70-110 beats per minute."
+  },
+  {
+    "id": "8-183",
+    "topic": "Pharmacology",
+    "subject": "Fundamentals",
+    "question": "Which of the following is NOT a principle of nursing ethics?",
+    "options": {
+      "A": "Autonomy",
+      "B": "Beneficence",
+      "C": "Maleficence",
+      "D": "Justice"
+    },
+    "correct_answer": "C",
+    "explanation": "Maleficence is not a nursing principle; the principles are Autonomy, Beneficence, Non-maleficence, and Justice."
+  },
+  {
+    "id": "9-184",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is the primary goal of health promotion?",
+    "options": {
+      "A": "To treat disease",
+      "B": "To increase longevity",
+      "C": "To maintain and improve health status",
+      "D": "To reduce healthcare costs"
+    },
+    "correct_answer": "C",
+    "explanation": "Health promotion aims to maintain and improve the health status of individuals and communities."
+  },
+  {
+    "id": "10-185",
+    "topic": "Research Methodology",
+    "subject": "Advanced",
+    "question": "What type of research design allows the researcher to manipulate the independent variable?",
+    "options": {
+      "A": "Descriptive research",
+      "B": "Correlational research",
+      "C": "Experimental research",
+      "D": "Qualitative research"
+    },
+    "correct_answer": "C",
+    "explanation": "Experimental research allows researchers to manipulate variables and determine cause-and-effect relationships."
+  },
+  {
+    "name": "Reproductive Health I",
+    "topics": [
+      "Antenatal care and pregnancy monitoring",
+      "Family planning methods",
+      "Maternal nutrition",
+      "Common pregnancy complications"
+    ],
+    "id": "q-186",
+    "question": "undefined (variant 38)"
+  },
+  {
+    "name": "Reproductive Health II",
+    "topics": [
+      "Labour and delivery stages",
+      "Midwifery nursing skills",
+      "Postnatal care of mother and baby",
+      "Obstetric emergencies"
+    ],
+    "id": "q-187"
+  },
+  {
+    "name": "Reproductive Health III",
+    "topics": [
+      "Gynecological disorders",
+      "Sexually transmitted infections",
+      "Infertility management",
+      "Reproductive cancers"
+    ],
+    "id": "q-188"
+  },
+  {
+    "id": "101-189",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    "options": {
+      "A": "Encourage bed rest",
+      "B": "Environmental hazard reduction",
+      "C": "Increase sedative medications",
+      "D": "Restrict mobility"
+    },
+    "correct_answer": "B",
+    "explanation": "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    "id": "102-190",
+    "topic": "Geriatric Nursing",
+    "subject": "Clinical",
+    "question": "What change is commonly seen in older adults?",
+    "options": {
+      "A": "Increased cardiac output",
+      "B": "Decreased bone density",
+      "C": "Faster metabolic rate",
+      "D": "Improved vision"
+    },
+    "correct_answer": "B",
+    "explanation": "Decreased bone density (osteoporosis) is common with aging."
+  },
+  {
+    "id": "201-191",
+    "topic": "Health Economics",
+    "subject": "Advanced",
+    "question": "What is cost-effectiveness analysis used for in healthcare? (variant 39)",
+    "options": {
+      "A": "To evaluate clinical skills",
+      "B": "To compare costs and outcomes of interventions",
+      "C": "To schedule staff",
+      "D": "To set patient charges"
+    },
+    "correct_answer": "B",
+    "explanation": "Cost-effectiveness analysis compares costs and health outcomes of interventions to guide resource allocation."
+  },
+  {
+    "id": "301-192",
+    "topic": "Midwifery",
+    "subject": "Maternal-Child",
+    "question": "What is the recommended immediate action for a woman in active labor with fetal distress?",
+    "options": {
+      "A": "Continue observation",
+      "B": "Immediate delivery planning and expedite birth",
+      "C": "Administer routine vitamins",
+      "D": "Discharge home"
+    },
+    "correct_answer": "B",
+    "explanation": "Fetal distress requires prompt action to expedite delivery and ensure fetal/maternal safety."
+  },
+  {
+    "id": "401-193",
+    "topic": "Nutrition & Dietetics",
+    "subject": "Fundamentals",
+    "question": "Which nutrient is most important for wound healing?",
+    "options": {
+      "A": "Vitamin C",
+      "B": "Vitamin D",
+      "C": "Iron",
+      "D": "Vitamin K"
+    },
+    "correct_answer": "A",
+    "explanation": "Vitamin C is essential for collagen synthesis and wound healing."
+  },
+  {
+    "id": "501-194",
+    "topic": "Primary Health Care",
+    "subject": "Community",
+    "question": "Which service is a core component of primary health care?",
+    "options": {
+      "A": "Specialized surgery",
+      "B": "Health education and promotion",
+      "C": "Complex cancer therapy",
+      "D": "Organ transplantation"
+    },
+    "correct_answer": "B",
+    "explanation": "Primary health care emphasizes health promotion, education, and community-based services."
+  },
+  {
+    "name": "Foundation of Nursing I",
+    "topics": [
+      "History and philosophy of nursing",
+      "Roles and responsibilities of nurses",
+      "Nursing process and care planning",
+      "Vital signs assessment",
+      "Infection prevention and control",
+      "Communication in nursing practice"
+    ],
+    "id": "q-195"
+  },
+  {
+    "name": "Foundation of Nursing II",
+    "topics": [
+      "Patient hygiene and comfort measures",
+      "Nutrition and elimination needs",
+      "Medication administration principles",
+      "Wound care and dressing techniques",
+      "Documentation and reporting"
+    ],
+    "id": "q-196",
+    "question": "undefined (variant 40)"
+  },
+  {
+    "name": "Foundation of Nursing III",
+    "topics": [
+      "Patient safety and quality nursing care",
+      "Critical thinking in nursing",
+      "Pain management",
+      "Oxygen therapy and suctioning",
+      "Care of unconscious patients"
+    ],
+    "id": "q-197"
+  },
+  {
+    "name": "Foundation of Nursing IV",
+    "topics": [
+      "Advanced nursing procedures",
+      "Leadership and supervision in nursing",
+      "Health education strategies",
+      "Ethical decision-making in care",
+      "Professional development"
+    ],
+    "id": "q-198"
+  },
+  {
+    "name": "Research and Statistics I",
+    "topics": [
+      "Introduction to nursing research",
+      "Data collection methods",
+      "Descriptive statistics",
+      "Health research ethics"
+    ],
+    "id": "q-199"
+  },
+  {
+    "name": "Research Methodology and Statistics II",
+    "topics": [
+      "Research designs",
+      "Inferential statistics",
+      "Proposal writing",
+      "Report writing and dissemination"
+    ],
+    "id": "q-200"
+  }
+]

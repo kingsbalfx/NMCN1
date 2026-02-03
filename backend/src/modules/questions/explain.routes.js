@@ -16,17 +16,42 @@ router.post("/explain", auth, paid, async (req, res) => {
       return res.status(400).json({ error: "question_text is required" });
     }
 
-    const explanation = await generateQuestion({
-      topic, 
-      type: "explanation", 
-      difficulty
-    });
+    try {
+      const explanation = await generateQuestion({
+        topic, 
+        type: "explanation", 
+        difficulty
+      });
 
-    res.json(explanation);
+      res.json(explanation);
+    } catch (aiErr) {
+      console.error("AI error:", aiErr.message);
+      
+      // Fallback explanation
+      res.json({
+        question: question_text,
+        topic,
+        difficulty,
+        explanation: "An explanation for this question. AI generation temporarily unavailable.",
+        sources: ["NMCN Curriculum Guide"],
+        aiGenerated: false,
+        fallback: true
+      });
+    }
   } catch (err) {
     console.error("Explanation generation error:", err);
     res.status(500).json({ error: "Failed to generate explanation" });
   }
+});
+
+/**
+ * TEST ROUTE
+ */
+router.get("/test", (req, res) => {
+  res.json({ 
+    message: "Explain route works ✅",
+    description: "POST /api/questions/explain - Get AI explanations"
+  });
 });
 
 module.exports = router;

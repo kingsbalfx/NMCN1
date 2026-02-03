@@ -23,6 +23,20 @@ A comprehensive backend API for the Kingsbal Digital Healthcare Bridge platform,
 - **Payments**: Paystack
 - **Deployment**: Vercel
 
+### Deployment & Docker
+
+- Run production: `npm run start:prod`
+- Docker: build and run with:
+
+```bash
+docker build -t kingsbal-backend .
+docker run -p 5000:5000 --env-file .env -d kingsbal-backend
+```
+
+Notes:
+- Provide `DATABASE_URL`, `JWT_SECRET`, and (optional) `OPENAI_API_KEY` in environment for production features.
+- Use the included `Dockerfile` or `Procfile` for container/platform deploys.
+
 ## Installation
 
 ### Prerequisites

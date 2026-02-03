@@ -1,0 +1,11 @@
+module.exports = [
+  {
+    id: 401,
+    topic: "Nutrition & Dietetics",
+    subject: "Fundamentals",
+    question: "Which nutrient is most important for wound healing?",
+    options: { A: "Vitamin C", B: "Vitamin D", C: "Iron", D: "Vitamin K" },
+    correct_answer: "A",
+    explanation: "Vitamin C is essential for collagen synthesis and wound healing."
+  }
+];

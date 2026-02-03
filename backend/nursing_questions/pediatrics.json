@@ -1,0 +1,29 @@
+module.exports = [
+	{
+		id: 801,
+		topic: "Pediatric Growth and Development",
+		subject: "Pediatrics",
+		question: "At what age does a typical infant begin to sit unsupported?",
+		options: { A: "1 month", B: "4-7 months", C: "12 months", D: "24 months" },
+		correct_answer: "B",
+		explanation: "Most infants begin to sit without support between 4 to 7 months."
+	},
+	{
+		id: 802,
+		topic: "Immunization",
+		subject: "Pediatrics",
+		question: "Which vaccine is commonly given at birth to prevent tuberculosis?",
+		options: { A: "BCG", B: "MMR", C: "DPT", D: "Hep B at 6 months" },
+		correct_answer: "A",
+		explanation: "BCG vaccine is typically administered at birth in many countries to protect against TB."
+	},
+	{
+		id: 803,
+		topic: "Pediatric Assessment",
+		subject: "Pediatrics",
+		question: "For a febrile infant, which sign is most concerning?",
+		options: { A: "Mild irritability", B: "Lethargy and poor feeding", C: "Normal activity", D: "Slightly increased appetite" },
+		correct_answer: "B",
+		explanation: "Lethargy and poor feeding in a febrile infant are concerning and require urgent evaluation."
+	}
+];

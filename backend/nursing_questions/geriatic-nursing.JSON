@@ -1,0 +1,20 @@
+module.exports = [
+  {
+    id: 101,
+    topic: "Geriatric Nursing",
+    subject: "Clinical",
+    question: "Which intervention is most appropriate to reduce fall risk in elderly patients?",
+    options: { A: "Encourage bed rest", B: "Environmental hazard reduction", C: "Increase sedative medications", D: "Restrict mobility" },
+    correct_answer: "B",
+    explanation: "Reducing environmental hazards (loose rugs, poor lighting) is key to preventing falls in the elderly."
+  },
+  {
+    id: 102,
+    topic: "Geriatric Nursing",
+    subject: "Clinical",
+    question: "What change is commonly seen in older adults?",
+    options: { A: "Increased cardiac output", B: "Decreased bone density", C: "Faster metabolic rate", D: "Improved vision" },
+    correct_answer: "B",
+    explanation: "Decreased bone density (osteoporosis) is common with aging."
+  }
+];

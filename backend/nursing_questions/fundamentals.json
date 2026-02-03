@@ -1,0 +1,29 @@
+module.exports = [
+	{
+		id: 701,
+		topic: "Nursing Fundamentals",
+		subject: "Fundamentals",
+		question: "What is the correct sequence of the nursing process?",
+		options: { A: "Assessment, Diagnosis, Planning, Implementation, Evaluation", B: "Planning, Assessment, Implementation, Diagnosis, Evaluation", C: "Diagnosis, Implementation, Assessment, Planning, Evaluation", D: "Assessment, Planning, Diagnosis, Implementation, Evaluation" },
+		correct_answer: "A",
+		explanation: "The standardized nursing process is Assessment → Diagnosis → Planning → Implementation → Evaluation."
+	},
+	{
+		id: 702,
+		topic: "Vital Signs",
+		subject: "Fundamentals",
+		question: "Which vital sign assessment is used to evaluate perfusion and heart rate?",
+		options: { A: "Respiratory rate", B: "Pulse (heart rate)", C: "Temperature", D: "Oxygen saturation only" },
+		correct_answer: "B",
+		explanation: "Pulse measurement evaluates heart rate and perfusion status."
+	},
+	{
+		id: 703,
+		topic: "Infection Control",
+		subject: "Fundamentals",
+		question: "Which action is most effective to prevent hospital-acquired infections?",
+		options: { A: "Wearing perfumed lotion", B: "Hand hygiene between patient contacts", C: "Skipping PPE", D: "Reusing single-use supplies" },
+		correct_answer: "B",
+		explanation: "Proper hand hygiene is the single most effective measure to prevent healthcare-associated infections."
+	}
+];

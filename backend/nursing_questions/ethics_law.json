@@ -1,0 +1,29 @@
+module.exports = [
+	{
+		id: 601,
+		topic: "Nursing Ethics",
+		subject: "Ethics & Law",
+		question: "Which ethical principle requires the nurse to do no harm to the patient?",
+		options: { A: "Autonomy", B: "Beneficence", C: "Non-maleficence", D: "Justice" },
+		correct_answer: "C",
+		explanation: "Non-maleficence means avoiding harm to the patient."
+	},
+	{
+		id: 602,
+		topic: "Consent and Confidentiality",
+		subject: "Ethics & Law",
+		question: "When is it acceptable to break patient confidentiality?",
+		options: { A: "To discuss with a friend", B: "When required by law (e.g., reportable infectious disease)", C: "To post on social media", D: "For curiosity" },
+		correct_answer: "B",
+		explanation: "Confidentiality may be breached when disclosure is legally required, such as reportable diseases or imminent harm."
+	},
+	{
+		id: 603,
+		topic: "Professional Conduct",
+		subject: "Ethics & Law",
+		question: "A nurse who witnesses a colleague falsifying records should: ",
+		options: { A: "Ignore it", B: "Confront the colleague privately only", C: "Report to appropriate authority according to policy", D: "Alter the records to hide it" },
+		correct_answer: "C",
+		explanation: "Serious professional misconduct like falsifying records must be reported through proper channels."
+	}
+];
