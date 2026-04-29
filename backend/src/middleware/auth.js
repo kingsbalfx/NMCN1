@@ -2,7 +2,10 @@ const jwt = require("jsonwebtoken");
 
 module.exports = function authMiddleware(req, res, next) {
   try {
-    const token = req.headers.authorization?.split(" ")[1];
+    // Support both Authorization header and HttpOnly cookie (from server-set login)
+    const headerToken = req.headers.authorization?.split(" ")[1];
+    const cookieToken = req.cookies?.token;
+    const token = headerToken || cookieToken;
 
     if (!token) {
       return res.status(401).json({ error: "No authorization token provided" });

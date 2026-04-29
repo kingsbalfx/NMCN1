@@ -11,11 +11,15 @@ const { generateQuestion } = require("../src/utils/ai");
 const subjects = [
   {
     name: "Anatomy and Physiology I",
-    topics: ["Cells", "Tissues", "Musculoskeletal System", "Cardiovascular System"]
+    topics: ["Levels of organization", "Cell structure and function", "Tissues", "Skeletal system", "Joints", "Muscular system"]
+  },
+  {
+    name: "Anatomy and Physiology II",
+    topics: ["Cardiovascular system", "Blood composition", "Respiratory system", "Digestive system", "Urinary system", "Endocrine system"]
   },
   {
     name: "Foundation of Nursing I",
-    topics: ["Introduction to Nursing", "Nursing Process", "Vital Signs", "Infection Control"]
+    topics: ["History of Nursing", "Roles of a nurse", "Ethics and legal issues", "Communication", "Health and illness concepts", "Infection prevention", "Vital signs"]
   },
   {
     name: "Introduction to Nursing Informatics",
@@ -35,23 +39,19 @@ const subjects = [
   },
   {
     name: "Microbiology",
-    topics: ["Bacteria", "Viruses", "Infection Prevention", "Immunity"]
+    topics: ["Micro-organisms", "Sterilization", "Disinfection", "Immunity"]
   },
   {
     name: "Social and Behavioural Science",
     topics: ["Psychology", "Sociology", "Human Behaviour in Health"]
   },
   {
-    name: "Anatomy and Physiology II",
-    topics: ["Respiratory System", "Digestive System", "Endocrine System"]
-  },
-  {
     name: "Foundation of Nursing II",
-    topics: ["Patient Care", "Nutrition Basics", "Medication Administration"]
+    topics: ["Nursing process", "Patient assessment", "Documentation", "Hygiene and comfort", "Bed making", "Positioning patients"]
   },
   {
     name: "Medical/Surgical Nursing I",
-    topics: ["Cardiology", "Respiratory Disorders", "Hypertension"]
+    topics: ["Patient care principles", "Pain management", "Fluid and electrolyte balance", "Pre/Post-operative care"]
   },
   {
     name: "Primary Health Care I",
@@ -95,7 +95,7 @@ const subjects = [
   },
   {
     name: "Foundation of Nursing IV",
-    topics: ["Advanced Nursing Skills", "Leadership Basics", "Clinical Judgment"]
+    topics: ["Advanced nursing procedures", "Leadership", "Supervision", "Ethical decision-making"]
   },
   {
     name: "Medical/Surgical Nursing III",
@@ -172,6 +172,14 @@ const subjects = [
   {
     name: "Entrepreneurship in Nursing",
     topics: ["Private Practice", "Innovation", "Business in Healthcare"]
+  },
+  {
+    name: "Home Healthcare Nursing",
+    topics: ["Home-based care", "Chronic disease management", "Palliative care", "Family-centered care"]
+  },
+  {
+    name: "Principles of Management and Teaching",
+    topics: ["Leadership styles", "Nursing administration", "Teaching methods", "Clinical supervision"]
   }
 ];
 
@@ -191,14 +199,21 @@ async function generateFullBank() {
 
           for (let i = 0; i < count; i++) {
             try {
-              const q = await generateQuestion({ topic, type, difficulty });
+              // Enhanced prompt logic to include curriculum context for essay answers
+              const q = await generateQuestion({ 
+                topic, 
+                type, 
+                difficulty,
+                curriculumContext: subject.name 
+              });
 
               bank.push({
                 subject: subject.name,
                 topic,
                 type,
                 difficulty,
-                ...q
+                ...q,
+                generatedAt: new Date().toISOString()
               });
 
               console.log(

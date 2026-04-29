@@ -1,0 +1,575 @@
+{
+  "introduction": {
+    "aim": "To prepare competent polyvalent nurse practitioners who: Use problem-solving skills, Provide safe, acceptable, effective, and affordable healthcare",
+    "philosophy": "Nursing aims to achieve optimum health for individuals, families, and communities. Humans are bio-psycho-social beings. Nursing practice must be evidence-based. Health is a dynamic state of wellness. Healthcare accessibility and affordability are essential.",
+    "objectives": [
+      "Apply knowledge of biological, behavioural, and technological sciences",
+      "Use the nursing process for comprehensive care",
+      "Promote self-reliance in individuals and communities",
+      "Work independently and collaboratively",
+      "Supervise clinical experiences",
+      "Provide family planning and primary health care",
+      "Identify high-risk clients",
+      "Provide safe healthcare environments",
+      "Meet emotional and psychological needs"
+    ],
+    "competencies": [
+      "Perform patient assessment (history, physical exam)",
+      "Develop and implement care plans",
+      "Interpret diagnostic results",
+      "Evaluate outcomes of nursing care",
+      "Maintain referral systems"
+    ]
+  },
+  "courses": {
+    "year1_semester1": [
+      {
+        "code": "ANA101",
+        "title": "Anatomy & Physiology I",
+        "description": "Introduction to the structure and function of the human body",
+        "objectives": [
+          "Describe the organization of the human body",
+          "Explain cell structure and function",
+          "Identify body systems and their roles"
+        ],
+        "content": [
+          "Introduction to Anatomy & Physiology",
+          "Levels of organization",
+          "Cell structure and function",
+          "Tissues (epithelial, connective, muscle, nervous)",
+          "Skeletal system",
+          "Joints",
+          "Muscular system"
+        ],
+        "units": 4,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 15, "total": 90 }
+      },
+      {
+        "code": "FON101",
+        "title": "Foundation of Nursing I",
+        "description": "Basic principles and concepts of nursing practice",
+        "content": [
+          "History of Nursing",
+          "Roles of a nurse",
+          "Ethics and legal issues",
+          "Communication in nursing",
+          "Health and illness concepts",
+          "Infection prevention and control",
+          "Vital signs monitoring"
+        ],
+        "units": 4,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 15, "total": 90 }
+      },
+      {
+        "code": "NIN101",
+        "title": "Nursing Informatics",
+        "description": "Use of computers in healthcare",
+        "content": [
+          "Use of computers in healthcare",
+          "Electronic health records",
+          "Data management",
+          "Health information systems"
+        ],
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "ENG101",
+        "title": "Use of English",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "PHY101",
+        "title": "Applied Physics",
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "CHE101",
+        "title": "Applied Chemistry",
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "MIC101",
+        "title": "Microbiology",
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "SBS101",
+        "title": "Social & Behavioural Science",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      }
+    ],
+    "year1_semester2": [
+      {
+        "code": "ANA102",
+        "title": "Anatomy & Physiology II",
+        "content": [
+          "Cardiovascular system",
+          "Blood composition and functions",
+          "Respiratory system",
+          "Digestive system",
+          "Urinary system",
+          "Endocrine system"
+        ],
+        "units": 4,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 15, "total": 90 }
+      },
+      {
+        "code": "FON102",
+        "title": "Foundation of Nursing II",
+        "content": [
+          "Nursing process",
+          "Patient assessment",
+          "Documentation",
+          "Hygiene and comfort",
+          "Bed making",
+          "Positioning patients",
+          "Basic nursing procedures"
+        ],
+        "units": 4,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 15, "total": 90 }
+      },
+      {
+        "code": "MSN101",
+        "title": "Medical-Surgical Nursing I",
+        "content": [
+          "Introduction to medical-surgical nursing",
+          "Patient care principles",
+          "Pain management",
+          "Fluid and electrolyte balance",
+          "Pre-operative and post-operative care"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "PHC101",
+        "title": "Primary Health Care I",
+        "content": [
+          "Principles of primary health care",
+          "Community participation",
+          "Disease prevention",
+          "Immunization programs",
+          "Environmental health",
+          "Health education"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "PHA101",
+        "title": "Pharmacology I",
+        "content": [
+          "Drug classification",
+          "Pharmacokinetics",
+          "Pharmacodynamics",
+          "Drug administration routes",
+          "Dosage calculations",
+          "Adverse drug reactions",
+          "Drug safety"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "NEL101",
+        "title": "Nursing Ethics & Jurisprudence",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      }
+    ],
+    "year2_semester1": [
+      {
+        "code": "ANA201",
+        "title": "Anatomy & Physiology III",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "FON201",
+        "title": "Foundation of Nursing III",
+        "content": [
+          "Medication administration",
+          "Wound care",
+          "Intravenous therapy",
+          "Patient safety",
+          "Advanced clinical skills"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "MSN201",
+        "title": "Medical-Surgical Nursing II",
+        "content": [
+          "Cardiovascular disorders",
+          "Respiratory disorders",
+          "Gastrointestinal disorders",
+          "Renal disorders",
+          "Neurological disorders",
+          "Endocrine disorders",
+          "Musculoskeletal disorders",
+          "Disease processes",
+          "Nursing management",
+          "Patient education"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "PHC201",
+        "title": "Primary Health Care II",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "PHA201",
+        "title": "Pharmacology II",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "REP201",
+        "title": "Reproductive Health I",
+        "content": [
+          "Anatomy of reproductive system",
+          "Antenatal care",
+          "Labour and delivery",
+          "Postnatal care",
+          "Family planning",
+          "Neonatal care"
+        ],
+        "units": 3,
+        "hours": { "lectures": 45, "practical": 0, "tutorial": 0, "total": 45 }
+      },
+      {
+        "code": "RES201",
+        "title": "Research & Statistics I",
+        "content": [
+          "Research methods",
+          "Data collection",
+          "Data analysis",
+          "Interpretation of results",
+          "Evidence-based practice"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      }
+    ],
+    "year2_semester2": [
+      {
+        "code": "FON202",
+        "title": "Foundation of Nursing IV",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "MSN202",
+        "title": "Medical-Surgical Nursing III",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "PHA202",
+        "title": "Pharmacology III",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "RES202",
+        "title": "Research & Statistics II",
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "CHN201",
+        "title": "Community Health Nursing I",
+        "content": [
+          "Community diagnosis",
+          "Epidemiology basics",
+          "Home visits",
+          "School health services",
+          "Occupational health",
+          "Public health programs"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "REP202",
+        "title": "Reproductive Health II",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "NUT201",
+        "title": "Nutrition & Dietetics",
+        "content": [
+          "Nutritional requirements",
+          "Balanced diet",
+          "Therapeutic diets",
+          "Malnutrition"
+        ],
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "PWR201",
+        "title": "Professional Writing & Seminar",
+        "content": [
+          "Academic writing",
+          "Research presentation",
+          "Report writing",
+          "Seminar delivery"
+        ],
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "GOV201",
+        "title": "Politics & Governance in Nursing",
+        "content": [
+          "Health policy",
+          "Leadership in nursing",
+          "Governance structures",
+          "Advocacy"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      }
+    ],
+    "year3_semester1": [
+      {
+        "code": "MSN301",
+        "title": "Medical-Surgical Nursing IV",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "REP301",
+        "title": "Reproductive Health III",
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "CHN301",
+        "title": "Community Health Nursing II",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "MHN301",
+        "title": "Mental Health/Psychiatric Nursing",
+        "content": [
+          "Mental health concepts",
+          "Psychiatric disorders",
+          "Therapeutic communication",
+          "Crisis intervention",
+          "Counseling techniques"
+        ],
+        "units": 3,
+        "hours": { "lectures": 45, "practical": 0, "tutorial": 0, "total": 45 }
+      },
+      {
+        "code": "EDN301",
+        "title": "Emergency & Disaster Nursing",
+        "content": [
+          "Emergency care principles",
+          "Triage",
+          "First aid",
+          "Disaster preparedness",
+          "Mass casualty management"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "QPS301",
+        "title": "Quality Improvement & Patient Safety",
+        "content": [
+          "Healthcare quality standards",
+          "Risk management",
+          "Patient safety strategies",
+          "Error prevention",
+          "Clinical audits"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      }
+    ],
+    "year3_semester2": [
+      {
+        "code": "MSN302",
+        "title": "Medical-Surgical Nursing V",
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      },
+      {
+        "code": "RES302",
+        "title": "Research Project",
+        "units": 3,
+        "hours": { "lectures": 0, "practical": 0, "tutorial": 45, "total": 45 }
+      },
+      {
+        "code": "HHN302",
+        "title": "Home Healthcare Nursing",
+        "content": [
+          "Home-based care principles",
+          "Chronic disease management",
+          "Palliative care",
+          "Family-centered care"
+        ],
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 45, "tutorial": 0, "total": 60 }
+      },
+      {
+        "code": "MGT302",
+        "title": "Principles of Management & Teaching",
+        "content": [
+          "Leadership styles",
+          "Nursing administration",
+          "Teaching methods",
+          "Clinical supervision"
+        ],
+        "units": 2,
+        "hours": { "lectures": 15, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "HEC302",
+        "title": "Health Economics",
+        "content": [
+          "Healthcare financing",
+          "Cost-effectiveness",
+          "Resource allocation",
+          "Health insurance systems"
+        ],
+        "units": 2,
+        "hours": { "lectures": 30, "practical": 0, "tutorial": 0, "total": 30 }
+      },
+      {
+        "code": "ENT302",
+        "title": "Entrepreneurship in Nursing",
+        "content": [
+          "Business concepts",
+          "Private practice",
+          "Healthcare services management",
+          "Innovation in nursing"
+        ],
+        "units": 3,
+        "hours": { "lectures": 30, "practical": 45, "tutorial": 0, "total": 75 }
+      }
+    ]
+  },
+  "clinical_experience": {
+    "areas": [
+      { "area": "Medical wards", "hours": 240 },
+      { "area": "Surgical wards", "hours": 240 },
+      { "area": "Pediatric wards", "hours": 120 },
+      { "area": "Theatre", "hours": 60 },
+      { "area": "Intensive Care", "hours": 60 },
+      { "area": "Ophthalmic", "hours": 120 },
+      { "area": "Obstetrics & Gynaecology", "hours": 180 },
+      { "area": "HIV/AIDS Unit", "hours": 60 },
+      { "area": "Family Planning", "hours": 30 },
+      { "area": "Outpatient Department", "hours": 120 },
+      { "area": "Dialysis", "hours": 30 },
+      { "area": "Infectious Disease Centre", "hours": 60 },
+      { "area": "Orthopaedic", "hours": 60 },
+      { "area": "Mental/Psychiatric", "hours": 120 },
+      { "area": "Special senses", "hours": 60 },
+      { "area": "Critical care", "hours": 30 },
+      { "area": "Accident & Emergency", "hours": 60 },
+      { "area": "Community Experience", "hours": 240 }
+    ],
+    "total_hours": 1680
+  },
+  "core_competencies": [
+    {
+      "category": "Patient Assessment",
+      "skills": [
+        "Take comprehensive health history",
+        "Perform physical examination",
+        "Assess vital signs accurately",
+        "Identify abnormalities"
+      ]
+    },
+    {
+      "category": "Nursing Diagnosis & Planning",
+      "skills": [
+        "Formulate nursing diagnoses",
+        "Develop individualized care plans",
+        "Set measurable goals",
+        "Prioritize patient needs"
+      ]
+    },
+    {
+      "category": "Implementation of Care",
+      "skills": [
+        "Provide direct patient care",
+        "Administer medications safely",
+        "Assist in procedures",
+        "Maintain aseptic techniques"
+      ]
+    },
+    {
+      "category": "Evaluation",
+      "skills": [
+        "Monitor patient progress",
+        "Modify care plans",
+        "Document outcomes"
+      ]
+    }
+  ],
+  "essential_procedures": {
+    "basic": [
+      "Hand washing",
+      "Bed making (open & occupied)",
+      "Feeding patients",
+      "Personal hygiene care",
+      "Positioning and mobility"
+    ],
+    "vital_signs": [
+      "Temperature",
+      "Pulse",
+      "Respiration",
+      "Blood pressure"
+    ],
+    "medication": [
+      "Oral medications",
+      "Intramuscular injections",
+      "Intravenous therapy",
+      "Subcutaneous injections"
+    ],
+    "wound_care": [
+      "Dressing techniques",
+      "Infection control",
+      "Sterile procedures",
+      "Wound assessment"
+    ],
+    "iv_therapy": [
+      "IV insertion",
+      "Fluid administration",
+      "Monitoring complications"
+    ],
+    "catheterization": [
+      "Male catheterization",
+      "Female catheterization",
+      "Urine monitoring"
+    ],
+    "oxygen_therapy": [
+      "Oxygen administration methods",
+      "Monitoring oxygen saturation"
+    ],
+    "emergency": [
+      "CPR (Cardiopulmonary Resuscitation)",
+      "Bleeding control",
+      "Shock management",
+      "Fracture immobilization"
+    ]
+  }
+}

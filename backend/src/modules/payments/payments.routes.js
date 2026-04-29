@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const pool = require("../../config/db");
 const auth = require("../../middleware/auth");
+const crypto = require("crypto");
 
 const router = express.Router();
 
@@ -182,6 +183,59 @@ router.get("/status/:reference", auth, async (req, res) => {
  */
 router.get("/test", (req, res) => {
   res.json({ message: "Payments route works ✅" });
+});
+
+/**
+ * PAYSTACK WEBHOOK
+ */
+router.post("/webhook", express.raw({ type: 'application/json' }), async (req, res) => {
+  try {
+    const secret = process.env.PAYSTACK_SECRET_KEY;
+    const signature = req.headers['x-paystack-signature'];
+
+    if (!signature) {
+      return res.status(400).send('No signature');
+    }
+
+    const expectedSignature = crypto
+      .createHmac('sha512', secret)
+      .update(req.body)
+      .digest('hex');
+
+    if (signature !== expectedSignature) {
+      return res.status(400).send('Invalid signature');
+    }
+
+    const event = JSON.parse(req.body);
+
+    if (event.event === 'charge.success') {
+      const { customer, metadata } = event.data;
+
+      if (metadata && metadata.student_id) {
+        // Update user's subscription
+        const expiry = new Date();
+        expiry.setMonth(expiry.getMonth() + 1); // Assuming monthly subscription
+
+        await pool.query(
+          "UPDATE users SET subscription_expiry = $1 WHERE id = $2",
+          [expiry, metadata.student_id]
+        );
+
+        // Log the transaction
+        await pool.query(
+          "INSERT INTO payments (user_id, reference, amount, status, created_at) VALUES ($1, $2, $3, $4, $5)",
+          [metadata.student_id, event.data.reference, event.data.amount / 100, 'success', new Date()]
+        );
+
+        console.log(`Subscription upgraded for user ${metadata.student_id}`);
+      }
+    }
+
+    res.status(200).send('OK');
+  } catch (err) {
+    console.error("Webhook error:", err.message);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 module.exports = router;

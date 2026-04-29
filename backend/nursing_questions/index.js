@@ -217,5 +217,23 @@ module.exports = {
   
   getCount: () => allQuestions.length,
   
-  getFallback: () => fallbackQuestions
+  getFallback: () => fallbackQuestions,
+
+  /**
+   * Game Scoring Logic
+   * Calculates score and provides feedback
+   */
+  evaluateAnswer: (questionId, userAnswer) => {
+    const question = allQuestions.find(q => q.id == questionId);
+    if (!question) return { error: "Question not found" };
+
+    const isCorrect = question.correct_answer === userAnswer;
+    return {
+      isCorrect,
+      correctAnswer: question.correct_answer,
+      explanation: question.explanation,
+      points: isCorrect ? 10 : 0,
+      gameFeedback: isCorrect ? "Excellent! You're a pro." : "Not quite, keep studying!"
+    };
+  }
 };

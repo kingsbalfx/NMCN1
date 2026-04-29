@@ -222,4 +222,85 @@ router.delete("/subjects/:id", auth, admin, async (req, res) => {
   }
 });
 
+/**
+ * GET ALL USERS
+ */
+router.get("/users", auth, admin, async (req, res) => {
+  try {
+    const users = await pool.query(
+      "SELECT id, full_name, email, role, subscription_expiry, last_login, is_active, created_at FROM users ORDER BY created_at DESC"
+    );
+    res.json(users.rows);
+  } catch (err) {
+    console.error("Users fetch error:", err.message);
+    res.status(500).json({ error: "Failed to fetch users" });
+  }
+});
+
+/**
+ * MANUAL UPGRADE USER SUBSCRIPTION
+ */
+router.post("/users/:id/upgrade", auth, admin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { months = 1 } = req.body;
+
+    const expiry = new Date();
+    expiry.setMonth(expiry.getMonth() + months);
+
+    await pool.query(
+      "UPDATE users SET subscription_expiry = $1 WHERE id = $2",
+      [expiry, id]
+    );
+
+    res.json({ message: "User subscription upgraded successfully", expiry });
+  } catch (err) {
+    console.error("User upgrade error:", err.message);
+    res.status(500).json({ error: "Failed to upgrade user" });
+  }
+});
+
+/**
+ * BAN/UNBAN USER
+ */
+router.post("/users/:id/ban", auth, admin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { ban = true } = req.body;
+
+    await pool.query(
+      "UPDATE users SET is_active = $1 WHERE id = $2",
+      [!ban, id]
+    );
+
+    res.json({ message: `User ${ban ? 'banned' : 'unbanned'} successfully` });
+  } catch (err) {
+    console.error("User ban error:", err.message);
+    res.status(500).json({ error: "Failed to ban user" });
+  }
+});
+
+/**
+ * ANALYTICS: REVENUE AND MODULES
+ */
+router.get("/analytics", auth, admin, async (req, res) => {
+  try {
+    const revenue = await pool.query(
+      "SELECT SUM(amount) as total_revenue FROM payments WHERE status = 'success'"
+    );
+
+    const difficultModules = await pool.query(
+      "SELECT topic_id, COUNT(*) as attempts, AVG(percentage) as avg_score FROM results GROUP BY topic_id ORDER BY avg_score ASC LIMIT 5"
+    );
+
+    res.json({
+      totalRevenue: revenue.rows[0].total_revenue || 0,
+      difficultModules: difficultModules.rows
+    });
+  } catch (err) {
+    console.error("Analytics error:", err.message);
+    res.status(500).json({ error: "Failed to fetch analytics" });
+  }
+});
+
 module.exports = router;

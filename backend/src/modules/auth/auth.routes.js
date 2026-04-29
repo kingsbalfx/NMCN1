@@ -18,6 +18,7 @@ const demoUsers = {
   "demo@kingsbal.com": {
     id: 1,
     full_name: "Demo User",
+    username: "kingsbalfx",
     email: "demo@kingsbal.com",
     password: "password123",
     role: "student"
@@ -25,10 +26,19 @@ const demoUsers = {
   "admin@kingsbal.com": {
     id: 2,
     full_name: "Admin User",
+    username: "admin",
     email: "admin@kingsbal.com",
-    password: "admin123",
+    password: "014/Pt/014",
     role: "admin"
   }
+};
+
+// Cookie options for login token
+const cookieOptions = {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax",
+  maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
 };
 
 /**
@@ -36,11 +46,11 @@ const demoUsers = {
  */
 router.post("/register", async (req, res) => {
   try {
-    const { full_name, email, password } = req.body;
+    const { full_name, username, email, password } = req.body;
 
     // Validation
-    if (!full_name || !email || !password) {
-      return res.status(400).json({ error: "full_name, email, and password are required" });
+    if (!full_name || !username || !email || !password) {
+      return res.status(400).json({ error: "full_name, username, email, and password are required" });
     }
 
     if (password.length < 6) {
@@ -53,24 +63,24 @@ router.post("/register", async (req, res) => {
         return res.status(409).json({ error: "Email already registered (demo mode)" });
       }
       const newId = Math.max(...Object.values(demoUsers).map(u => u.id)) + 1;
-      demoUsers[email] = { id: newId, full_name, email, password, role: "student" };
+      demoUsers[email] = { id: newId, full_name, username, email, password, role: "student" };
       return res.status(201).json({
         message: "Registered successfully (demo mode)",
-        user: { id: newId, full_name, email }
+        user: { id: newId, full_name, username, email }
       });
     }
 
     // Database mode
     try {
-      const existing = await pool.query("SELECT id FROM users WHERE email=$1", [email]);
+      const existing = await pool.query("SELECT id FROM users WHERE email=$1 OR username=$2", [email, username]);
       if (existing.rows.length) {
-        return res.status(409).json({ error: "Email already registered" });
+        return res.status(409).json({ error: "Email or username already registered" });
       }
 
       const hash = await bcrypt.hash(password, 10);
       const result = await pool.query(
-        "INSERT INTO users(full_name, email, password_hash) VALUES($1, $2, $3) RETURNING id, full_name, email",
-        [full_name, email, hash]
+        "INSERT INTO users(full_name, username, email, password_hash) VALUES($1, $2, $3, $4) RETURNING id, full_name, username, email",
+        [full_name, username, email, hash]
       );
 
       res.status(201).json({ message: "Registered successfully", user: result.rows[0] });
@@ -85,23 +95,23 @@ router.post("/register", async (req, res) => {
 });
 
 /**
- * Login
+ * Login (supports username or email)
  */
 router.post("/login", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { username_or_email, password } = req.body;
 
-    if (!email || !password) {
-      return res.status(400).json({ error: "email and password are required" });
+    if (!username_or_email || !password) {
+      return res.status(400).json({ error: "username_or_email and password are required" });
     }
 
     // Demo mode
     if (isDemoMode) {
-      const user = demoUsers[email];
+      let user = Object.values(demoUsers).find(u => u.email === username_or_email || u.username === username_or_email);
       if (!user || user.password !== password) {
         return res.status(401).json({ 
           error: "Invalid login credentials (demo mode)",
-          hint: "Try demo@kingsbal.com / password123 or admin@kingsbal.com / admin123"
+          hint: "Try username:kingsbalfx/password:password123 or admin/014Pt014"
         });
       }
 
@@ -111,12 +121,15 @@ router.post("/login", async (req, res) => {
         { expiresIn: "7d" }
       );
 
+      res.cookie("token", token, cookieOptions);
+
       return res.json({
         message: "Login successful (demo mode)",
         token,
         user: {
           id: user.id,
           full_name: user.full_name,
+          username: user.username,
           email: user.email,
           role: user.role
         }
@@ -125,7 +138,7 @@ router.post("/login", async (req, res) => {
 
     // Database mode
     try {
-      const user = await pool.query("SELECT * FROM users WHERE email=$1", [email]);
+      const user = await pool.query("SELECT * FROM users WHERE email=$1 OR username=$2", [username_or_email, username_or_email]);
 
       if (!user.rows.length) {
         return res.status(401).json({ error: "Invalid login credentials" });
@@ -142,12 +155,15 @@ router.post("/login", async (req, res) => {
         { expiresIn: "7d" }
       );
 
+      res.cookie("token", token, cookieOptions);
+
       res.json({
         message: "Login successful",
         token,
         user: {
           id: user.rows[0].id,
           full_name: user.rows[0].full_name,
+          username: user.rows[0].username,
           email: user.rows[0].email,
           role: user.rows[0].role
         }
@@ -210,6 +226,142 @@ router.get("/test", (req, res) => {
       admin: { email: "admin@kingsbal.com", password: "admin123" }
     } : "Not available in database mode"
   });
+});
+/**
+ * Forgot Password - Generate reset token
+ */
+router.post("/forgot-password", async (req, res) => {
+  try {
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ error: "Email is required" });
+    }
+
+    // Demo mode - simulate email sending
+    if (isDemoMode) {
+      const user = Object.values(demoUsers).find(u => u.email === email);
+      if (!user) {
+        // Don't reveal if email exists (security best practice)
+        return res.json({ message: "If email exists, password reset link has been sent" });
+      }
+
+      // Generate reset token (expires in 15 minutes)
+      const resetToken = jwt.sign(
+        { id: user.id, type: "password-reset" },
+        process.env.JWT_SECRET || "demo-secret-key",
+        { expiresIn: "15m" }
+      );
+
+      console.log(`[Demo] Password reset token for ${email}: ${resetToken}`);
+      console.log(`[Demo] Reset URL: ${process.env.FRONTEND_URL || "http://localhost:3000"}/reset-password?token=${resetToken}`);
+
+      return res.json({ 
+        message: "If email exists, password reset link has been sent",
+        demo_token: resetToken // Only in demo mode
+      });
+    }
+
+    // Database mode
+    try {
+      const user = await pool.query("SELECT id FROM users WHERE email=$1", [email]);
+
+      if (!user.rows.length) {
+        return res.json({ message: "If email exists, password reset link has been sent" });
+      }
+
+      const resetToken = jwt.sign(
+        { id: user.rows[0].id, type: "password-reset" },
+        process.env.JWT_SECRET,
+        { expiresIn: "15m" }
+      );
+
+      // TODO: Send email with reset link (use nodemailer or SendGrid)
+      // const resetLink = `${process.env.FRONTEND_URL}/reset-password?token=${resetToken}`;
+      // await sendEmail(email, "Password Reset", `Click here to reset: ${resetLink}`);
+
+      return res.json({ message: "If email exists, password reset link has been sent" });
+    } catch (dbErr) {
+      console.error("Database forgot-password error:", dbErr.message);
+      res.status(500).json({ error: "Request failed" });
+    }
+  } catch (err) {
+    console.error("Forgot-password error:", err);
+    res.status(500).json({ error: "Request failed" });
+  }
+});
+
+/**
+ * Reset Password - Apply new password with token
+ */
+router.post("/reset-password", async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+
+    if (!token || !newPassword) {
+      return res.status(400).json({ error: "Token and new password are required" });
+    }
+
+    if (newPassword.length < 6) {
+      return res.status(400).json({ error: "Password must be at least 6 characters" });
+    }
+
+    // Verify token
+    let decoded;
+    try {
+      decoded = jwt.verify(token, process.env.JWT_SECRET || "demo-secret-key");
+      if (decoded.type !== "password-reset") {
+        return res.status(401).json({ error: "Invalid token" });
+      }
+    } catch (err) {
+      return res.status(401).json({ error: "Token expired or invalid" });
+    }
+
+    // Demo mode
+    if (isDemoMode) {
+      const user = Object.values(demoUsers).find(u => u.id === decoded.id);
+      if (!user) {
+        return res.status(401).json({ error: "User not found" });
+      }
+
+      // Update demo user password
+      user.password = newPassword;
+
+      return res.json({ 
+        message: "Password reset successful (demo mode)",
+        user: {
+          id: user.id,
+          full_name: user.full_name,
+          username: user.username,
+          email: user.email
+        }
+      });
+    }
+
+    // Database mode
+    try {
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
+      const user = await pool.query(
+        "UPDATE users SET password_hash=$1, updated_at=NOW() WHERE id=$2 RETURNING id, full_name, username, email",
+        [hashedPassword, decoded.id]
+      );
+
+      if (!user.rows.length) {
+        return res.status(401).json({ error: "User not found" });
+      }
+
+      return res.json({ 
+        message: "Password reset successful",
+        user: user.rows[0]
+      });
+    } catch (dbErr) {
+      console.error("Database reset-password error:", dbErr.message);
+      res.status(500).json({ error: "Password reset failed" });
+    }
+  } catch (err) {
+    console.error("Reset-password error:", err);
+    res.status(500).json({ error: "Password reset failed" });
+  }
 });
 
 module.exports = router;

@@ -10,6 +10,8 @@ const adminAIQuestionsRoutes = require("./modules/admin/ai_questions.routes");
 const paymentsRoutes = require("./modules/payments/payments.routes");
 const usersRoutes = require("./modules/users/users.routes");
 const curriculumRoutes = require("./modules/curriculum/curriculum.routes");
+const aiCurriculumRoutes = require("./modules/curriculum/ai_curriculum.routes");
+const contactRoutes = require("./modules/contact/contact.routes");
 
 // Middleware
 const errorHandler = require("./middleware/errorHandler");
@@ -19,6 +21,9 @@ const app = express();
 // Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Cookie parser (allow server-set HttpOnly cookies for auth)
+app.use(require("cookie-parser")());
 
 // Case-insensitive path middleware - normalize to lowercase for matching
 app.use((req, res, next) => {
@@ -130,6 +135,8 @@ app.use("/api/admin/ai-questions", adminAIQuestionsRoutes);
 app.use("/api/payments", paymentsRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/curriculum", curriculumRoutes);
+app.use("/api/curriculum/ai", aiCurriculumRoutes);
+app.use("/api/contact", contactRoutes);
 
 // Helpful API root and aliases to reduce 404s from legacy clients or typos
 app.get('/api', (req, res) => {
@@ -163,6 +170,8 @@ app.use("/admin/ai-questions", adminAIQuestionsRoutes);
 app.use("/payments", paymentsRoutes);
 app.use("/users", usersRoutes);
 app.use("/curriculum", curriculumRoutes);
+app.use("/curriculum/ai", aiCurriculumRoutes);
+app.use("/contact", contactRoutes);
 // ===== 404 HANDLER =====
 app.use((req, res) => {
   console.warn(`⚠️  404 Not Found: ${req.method} ${req.path}`);
