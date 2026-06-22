@@ -6,7 +6,7 @@ export function middleware(req: NextRequest) {
 
   if (pathname.startsWith('/admin')) {
     const superAdminCookie = req.cookies.get('is_super_admin');
-    if (!superAdminCookie || superAdminCookie !== 'true') {
+    if (!superAdminCookie || superAdminCookie.value !== 'true') {
       return NextResponse.redirect(new URL('/login', req.url));
     }
   }

@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require("express");
 
 const router = express.Router();
 
@@ -7,27 +7,27 @@ const router = express.Router();
  * Submit a contact form message
  * Body: { name, email, message }
  */
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
       return res.status(400).json({
         success: false,
-        message: 'Name, email, and message are required'
+        message: "Name, email, and message are required"
       });
     }
 
     // In a real app, save to database or send email
     // For now, we'll just log and return success
-    console.log('[CONTACT] New message:', { name, email, message, timestamp: new Date().toISOString() });
+    console.log("[CONTACT] New message:", { name, email, message, timestamp: new Date().toISOString() });
 
     // You could add email sending here using a service like SendGrid, Nodemailer, etc.
     // Example: await sendContactEmail({ name, email, message });
 
     res.status(200).json({
       success: true,
-      message: 'Thank you for your message! We\'ll get back to you soon.',
+      message: "Thank you for your message! We'll get back to you soon.",
       data: {
         name,
         email,
@@ -35,12 +35,12 @@ router.post('/', async (req, res) => {
       }
     });
   } catch (error) {
-    console.error('[CONTACT] Error:', error);
+    console.error("[CONTACT] Error:", error);
     res.status(500).json({
       success: false,
-      message: 'Failed to process contact request'
+      message: "Failed to process contact request"
     });
   }
 });
 
-export default router;
+module.exports = router;

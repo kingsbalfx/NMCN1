@@ -18,8 +18,13 @@ const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
-// Body parser middleware
-app.use(express.json());
+// Body parser middleware. Paystack webhook needs the raw body for signature verification.
+app.use((req, res, next) => {
+  if (req.originalUrl === "/api/payments/webhook" || req.originalUrl === "/payments/webhook") {
+    return express.raw({ type: "application/json" })(req, res, next);
+  }
+  return express.json()(req, res, next);
+});
 app.use(express.urlencoded({ extended: true }));
 
 // Cookie parser (allow server-set HttpOnly cookies for auth)

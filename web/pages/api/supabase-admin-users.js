@@ -2,9 +2,18 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const supabase = createClient(supabaseUrl, serviceRoleKey);
 
 export default async function handler(req, res) {
+  if (req.cookies?.is_super_admin !== 'true') {
+    return res.status(401).json({ error: 'Super admin session required' });
+  }
+
+  if (!supabaseUrl || !serviceRoleKey) {
+    return res.status(500).json({ error: 'Supabase admin configuration missing' });
+  }
+
+  const supabase = createClient(supabaseUrl, serviceRoleKey);
+
   if (req.method === 'GET') {
     const { data, error } = await supabase
       .from('profiles')

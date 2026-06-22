@@ -5,9 +5,6 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const superAdminEmail = process.env.NEXT_PUBLIC_SUPER_ADMIN_EMAIL;
 
-const anonClient = createClient(supabaseUrl, supabaseAnonKey);
-const serviceClient = createClient(supabaseUrl, serviceRoleKey);
-
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -21,6 +18,13 @@ export default async function handler(req, res) {
   if (email !== superAdminEmail) {
     return res.status(403).json({ error: 'Unauthorized admin email' });
   }
+
+  if (!supabaseUrl || !supabaseAnonKey || !serviceRoleKey || !superAdminEmail) {
+    return res.status(500).json({ error: 'Supabase admin configuration missing' });
+  }
+
+  const anonClient = createClient(supabaseUrl, supabaseAnonKey);
+  const serviceClient = createClient(supabaseUrl, serviceRoleKey);
 
   const { data, error: signInError } = await anonClient.auth.signInWithPassword({ email, password });
   if (signInError || !data?.user) {

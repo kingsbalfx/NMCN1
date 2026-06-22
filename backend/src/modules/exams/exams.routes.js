@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 /**
  * START CBT EXAM (PUBLIC - DEMO)
  */
-router.post("/cbt/start", async (req, res) => {
+router.post("/cbt/start", auth, paid, async (req, res) => {
   try {
     const { topic_id, limit } = req.body;
 
@@ -73,9 +73,9 @@ router.post("/cbt/start", async (req, res) => {
 /**
  * SUBMIT CBT EXAM
  */
-router.post("/cbt/submit", async (req, res) => {
+router.post("/cbt/submit", auth, paid, async (req, res) => {
   try {
-    const { answers, exam_id } = req.body;
+    const { answers, exam_id, course_code } = req.body;
 
     if (!answers || !Array.isArray(answers)) {
       return res.status(400).json({ error: "answers array is required" });
@@ -86,7 +86,8 @@ router.post("/cbt/submit", async (req, res) => {
     const total = answers.length;
 
     for (let a of answers) {
-      if (a.correct_answer && a.user_answer && a.correct_answer === a.user_answer) {
+      const submittedAnswer = a.user_answer || a.answer;
+      if (a.correct_answer && submittedAnswer && a.correct_answer === submittedAnswer) {
         score++;
       } else if (!pool.isDemoMode && a.question_id) {
         // If DB is available, verify correct answer from DB
@@ -95,7 +96,7 @@ router.post("/cbt/submit", async (req, res) => {
             "SELECT correct_answer FROM questions WHERE id=$1",
             [a.question_id]
           );
-          if (correct.rows.length && correct.rows[0].correct_answer === a.user_answer) {
+          if (correct.rows.length && correct.rows[0].correct_answer === submittedAnswer) {
             score++;
           }
         } catch (e) {
@@ -110,9 +111,24 @@ router.post("/cbt/submit", async (req, res) => {
     if (!pool.isDemoMode) {
       try {
         await pool.query(
-          "INSERT INTO results(user_id, exam_id, score, total, percentage, details) VALUES($1,$2,$3,$4,$5,$6)",
-          [req.user?.id || null, exam_id || null, score, total, percentage, JSON.stringify({ answers })]
+          "INSERT INTO results(user_id, exam_id, score, total, percentage, details, is_passed) VALUES($1,$2,$3,$4,$5,$6,$7)",
+          [req.user.id, exam_id || null, score, total, percentage, JSON.stringify({ answers }), percentage >= 50]
         );
+
+        if (course_code) {
+          await pool.query(
+            `INSERT INTO learning_progress(user_id, course_code, lesson_completed, flashcards_completed,
+              quiz_score, quiz_total, xp, streak_count, last_synced_at)
+             VALUES($1,$2,$3,$4,$5,$6,$7,$8,NOW())
+             ON CONFLICT(user_id, course_code)
+             DO UPDATE SET quiz_score=GREATEST(learning_progress.quiz_score,$5),
+               quiz_total=GREATEST(learning_progress.quiz_total,$6),
+               xp=GREATEST(learning_progress.xp,$7),
+               streak_count=GREATEST(learning_progress.streak_count,$8),
+               last_synced_at=NOW(), updated_at=NOW()`,
+            [req.user.id, course_code, percentage >= 50, false, score, total, score * 10, percentage >= 50 ? 1 : 0]
+          );
+        }
       } catch (e) {
         console.error("Failed to persist exam result:", e.message);
       }

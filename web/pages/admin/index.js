@@ -3,6 +3,8 @@ import ProtectedRoute from "../../components/ProtectedRoute";
 
 export default function AdminDashboard() {
   const cards = [
+    { title: "Upload Curriculum", href: "/admin/curriculum", desc: "Parse curriculum text into AI-ready courses and learning blocks", icon: "AI" },
+    { title: "Clinical Logbook", href: "/admin/clinical-logbook", desc: "Review submitted student procedures and supervisor evidence" },
     { title: "Generate Questions (AI)", href: "/admin/generate-questions", desc: "Auto-generate exam questions using AI", icon: "✨" },
     { title: "Manage Subjects", href: "/admin/subjects", desc: "View and organize nursing subjects and topics" },
     { title: "Manage Questions", href: "/admin/questions", desc: "Add, edit, and remove exam questions" },

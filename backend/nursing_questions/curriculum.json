@@ -571,5 +571,132 @@
       "Shock management",
       "Fracture immobilization"
     ]
+  },
+  "programme_rules": {
+    "admission_requirements": [
+      "Senior Secondary Certificate",
+      "Credit passes in English, Physics, Chemistry, Biology, and Mathematics",
+      "Maximum of two sittings"
+    ],
+    "teaching_methods": [
+      "Lectures",
+      "Discussions",
+      "Demonstrations",
+      "Clinical practice",
+      "Simulation",
+      "E-learning",
+      "Case studies",
+      "Group work"
+    ],
+    "attendance_requirement_percent": 80,
+    "continuous_assessment_percent": 30,
+    "final_exam_percent": 70,
+    "pass_mark_percent": 50,
+    "certification": "Registered Nurse (RN)",
+    "license_validity_years": 3
+  },
+  "clinical_logbook": {
+    "required_fields": [
+      "Date of procedure",
+      "Type of procedure",
+      "Patient condition without identity",
+      "Supervisor signature",
+      "Student reflection"
+    ],
+    "minimum_procedures": [
+      { "category": "Basic Nursing Procedures", "procedure": "Bed making", "minimum": 10 },
+      { "category": "Basic Nursing Procedures", "procedure": "Vital signs monitoring", "minimum": 20 },
+      { "category": "Basic Nursing Procedures", "procedure": "Feeding patients", "minimum": 10 },
+      { "category": "Basic Nursing Procedures", "procedure": "Personal hygiene care", "minimum": 15 },
+      { "category": "Medication Administration", "procedure": "Oral drugs", "minimum": 20 },
+      { "category": "Medication Administration", "procedure": "Intramuscular injections", "minimum": 10 },
+      { "category": "Medication Administration", "procedure": "Intravenous therapy", "minimum": 10 },
+      { "category": "Medication Administration", "procedure": "Subcutaneous injections", "minimum": 10 },
+      { "category": "Specialized Procedures", "procedure": "Wound dressing", "minimum": 15 },
+      { "category": "Specialized Procedures", "procedure": "Catheterization", "minimum": 5 },
+      { "category": "Specialized Procedures", "procedure": "Oxygen therapy", "minimum": 5 },
+      { "category": "Specialized Procedures", "procedure": "IV cannulation", "minimum": 5 },
+      { "category": "Maternal and Child Health", "procedure": "Antenatal care", "minimum": 10 },
+      { "category": "Maternal and Child Health", "procedure": "Assisting delivery", "minimum": 5 },
+      { "category": "Maternal and Child Health", "procedure": "Postnatal care", "minimum": 10 },
+      { "category": "Maternal and Child Health", "procedure": "Newborn care", "minimum": 10 },
+      { "category": "Maternal and Child Health", "procedure": "Immunization", "minimum": 15 },
+      { "category": "Community Health", "procedure": "Home visits", "minimum": 10 },
+      { "category": "Community Health", "procedure": "Health education sessions", "minimum": 5 },
+      { "category": "Community Health", "procedure": "Community diagnosis project", "minimum": 1 },
+      { "category": "Community Health", "procedure": "Outreach participation", "minimum": 2 },
+      { "category": "Mental Health", "procedure": "Patient observation reports", "minimum": 5 },
+      { "category": "Mental Health", "procedure": "Case study", "minimum": 1 }
+    ]
+  },
+  "evaluation": {
+    "clinical_criteria": [
+      "Skill performance",
+      "Professional behavior",
+      "Communication skills",
+      "Critical thinking",
+      "Patient care quality"
+    ],
+    "grading_scale": [
+      { "minimum": 70, "maximum": 100, "grade": "Distinction" },
+      { "minimum": 60, "maximum": 69, "grade": "Credit" },
+      { "minimum": 50, "maximum": 59, "grade": "Pass" },
+      { "minimum": 0, "maximum": 49, "grade": "Fail" }
+    ],
+    "research_project_requirements": [
+      "Choose a relevant topic",
+      "Conduct literature review",
+      "Use proper research methods",
+      "Collect and analyze data",
+      "Present and defend findings"
+    ]
+  },
+  "student_conduct": {
+    "code_of_conduct": [
+      "Respect patients' rights",
+      "Maintain confidentiality",
+      "Dress appropriately",
+      "Follow institutional rules",
+      "Avoid misconduct"
+    ],
+    "disciplinary_measures": [
+      "Warning",
+      "Suspension",
+      "Withdrawal from programme"
+    ],
+    "examination_rules": [
+      "No cheating",
+      "No unauthorized materials",
+      "Proper identification required",
+      "Late entry may be denied"
+    ]
+  },
+  "game_learning_blueprint": {
+    "tone": "Simple, friendly, visual, and exam-focused for nursing students",
+    "progression": [
+      "Year map",
+      "Semester worlds",
+      "Course levels",
+      "Topic quests",
+      "Boss exams",
+      "Clinical skill challenges"
+    ],
+    "ai_outputs_per_topic": [
+      "Simple lesson",
+      "Key points",
+      "Image prompt for visual explanation",
+      "Flashcards",
+      "CBT questions",
+      "Clinical scenario",
+      "Common exam traps",
+      "Revision summary"
+    ],
+    "offline_content": [
+      "Downloaded lessons",
+      "Downloaded quizzes",
+      "Saved explanations",
+      "Clinical logbook drafts",
+      "Progress waiting to sync"
+    ]
   }
 }

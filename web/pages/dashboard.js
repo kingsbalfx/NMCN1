@@ -136,27 +136,27 @@ export default function Dashboard() {
               icon="🎯"
               title="Take Mock Exam"
               description="Simulate exam conditions and get detailed performance analytics"
-              action={{ text: 'Start Exam', href: '/exams' }}
+              action={{ text: 'Start Mission', href: '/curriculum-quiz' }}
               color="#10b981"
             />
             <ActionCard
               icon="📊"
-              title="View Analytics"
-              description="Track your progress, strengths, and areas for improvement"
-              action={{ text: 'View Stats', href: '/analytics' }}
+              title="Study Plan"
+              description="Follow daily quests based on your weak areas, tutor activity, and quiz scores"
+              action={{ text: 'Open Plan', href: '/study-plan' }}
               color="#f59e0b"
             />
             <ActionCard
               icon="👥"
-              title="Study Resources"
-              description="Access study materials, explanations, and expert tips"
-              action={{ text: 'Explore', href: '/resources' }}
+              title="AI Tutor"
+              description="Ask curriculum questions and get simple explanations, examples, and visual prompts"
+              action={{ text: 'Ask Tutor', href: '/tutor' }}
               color="#8b5cf6"
             />
             <ActionCard
               icon="🎁"
-              title="Upgrade Plan"
-              description="Get unlimited access and premium features for 6 months"
+              title="Permanent Access"
+              description="Activate lifetime access with the one-time student registration fee"
               action={{ text: 'View Plans', href: '/subscribe' }}
               color="#ec4899"
             />

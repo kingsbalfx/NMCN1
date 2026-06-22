@@ -8,10 +8,20 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   full_name VARCHAR(255) NOT NULL,
+  username VARCHAR(100) UNIQUE,
   email VARCHAR(255) UNIQUE NOT NULL,
   password_hash VARCHAR(255) NOT NULL,
   phone VARCHAR(20),
-  role VARCHAR(50) DEFAULT 'user' CHECK (role IN ('user', 'admin', 'instructor')),
+  role VARCHAR(50) DEFAULT 'student' CHECK (role IN ('student', 'user', 'admin', 'instructor')),
+  has_paid BOOLEAN DEFAULT FALSE,
+  permanent_access BOOLEAN DEFAULT FALSE,
+  paid_at TIMESTAMP,
+  payment_reference VARCHAR(100),
+  device_id VARCHAR(255),
+  device_name VARCHAR(255),
+  device_bound_at TIMESTAMP,
+  avatar_gender VARCHAR(30),
+  avatar_style VARCHAR(100),
   subscription_expiry TIMESTAMP,
   last_login TIMESTAMP,
   is_active BOOLEAN DEFAULT TRUE,
@@ -20,7 +30,9 @@ CREATE TABLE users (
 );
 
 CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_username ON users(username);
 CREATE INDEX idx_users_role ON users(role);
+CREATE INDEX idx_users_device_id ON users(device_id);
 
 -- Topics/Subjects Table
 CREATE TABLE topics (
@@ -92,6 +104,109 @@ CREATE TABLE courses (
 
 CREATE INDEX idx_courses_instructor_id ON courses(instructor_id);
 CREATE INDEX idx_courses_category ON courses(category);
+
+-- Uploaded Curriculum Versions
+CREATE TABLE curriculum_uploads (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  raw_text TEXT,
+  parsed_content JSONB,
+  version INTEGER DEFAULT 1,
+  status VARCHAR(50) DEFAULT 'draft' CHECK (status IN ('draft', 'published', 'archived')),
+  uploaded_by INTEGER REFERENCES users(id),
+  published_by INTEGER REFERENCES users(id),
+  published_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_curriculum_uploads_status ON curriculum_uploads(status);
+CREATE INDEX idx_curriculum_uploads_uploaded_by ON curriculum_uploads(uploaded_by);
+CREATE INDEX idx_curriculum_uploads_published_at ON curriculum_uploads(published_at);
+
+-- AI-generated study packs for offline sync and review
+CREATE TABLE study_packs (
+  id SERIAL PRIMARY KEY,
+  course_code VARCHAR(50),
+  topic VARCHAR(255),
+  title VARCHAR(255),
+  content JSONB NOT NULL,
+  ai_generated BOOLEAN DEFAULT FALSE,
+  created_by INTEGER REFERENCES users(id),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_study_packs_course_code ON study_packs(course_code);
+
+-- Student course-level learning progress for game map and offline sync
+CREATE TABLE learning_progress (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  course_code VARCHAR(50) NOT NULL,
+  lesson_completed BOOLEAN DEFAULT FALSE,
+  flashcards_completed BOOLEAN DEFAULT FALSE,
+  quiz_score INTEGER DEFAULT 0,
+  quiz_total INTEGER DEFAULT 0,
+  xp INTEGER DEFAULT 0,
+  streak_count INTEGER DEFAULT 0,
+  last_synced_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, course_code)
+);
+
+CREATE INDEX idx_learning_progress_user_id ON learning_progress(user_id);
+CREATE INDEX idx_learning_progress_course_code ON learning_progress(course_code);
+
+-- Clinical logbook entries for required procedures and supervisor review
+CREATE TABLE clinical_logbook_entries (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  procedure_name VARCHAR(255) NOT NULL,
+  category VARCHAR(100),
+  performed_at DATE,
+  patient_condition TEXT,
+  reflection TEXT,
+  supervisor_name VARCHAR(255),
+  supervisor_signature TEXT,
+  status VARCHAR(50) DEFAULT 'draft' CHECK (status IN ('draft', 'submitted', 'approved', 'rejected')),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_clinical_logbook_user_id ON clinical_logbook_entries(user_id);
+CREATE INDEX idx_clinical_logbook_status ON clinical_logbook_entries(status);
+
+-- AI tutor messages for curriculum-grounded explanations and offline review
+CREATE TABLE tutor_messages (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  course_code VARCHAR(50),
+  topic VARCHAR(255),
+  question TEXT NOT NULL,
+  student_answer TEXT,
+  response JSONB NOT NULL,
+  ai_generated BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_tutor_messages_user_id ON tutor_messages(user_id);
+CREATE INDEX idx_tutor_messages_course_code ON tutor_messages(course_code);
+CREATE INDEX idx_tutor_messages_created_at ON tutor_messages(created_at);
+
+-- Adaptive study plans generated from progress, quiz results, and curriculum coverage
+CREATE TABLE study_plan_snapshots (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  plan_date DATE DEFAULT CURRENT_DATE,
+  plan JSONB NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(user_id, plan_date)
+);
+
+CREATE INDEX idx_study_plan_snapshots_user_id ON study_plan_snapshots(user_id);
+CREATE INDEX idx_study_plan_snapshots_plan_date ON study_plan_snapshots(plan_date);
 
 -- Subjects Table
 CREATE TABLE subjects (
@@ -268,6 +383,18 @@ CREATE TRIGGER update_questions_timestamp BEFORE UPDATE ON questions
   FOR EACH ROW EXECUTE FUNCTION update_timestamp();
 
 CREATE TRIGGER update_courses_timestamp BEFORE UPDATE ON courses
+  FOR EACH ROW EXECUTE FUNCTION update_timestamp();
+
+CREATE TRIGGER update_curriculum_uploads_timestamp BEFORE UPDATE ON curriculum_uploads
+  FOR EACH ROW EXECUTE FUNCTION update_timestamp();
+
+CREATE TRIGGER update_study_packs_timestamp BEFORE UPDATE ON study_packs
+  FOR EACH ROW EXECUTE FUNCTION update_timestamp();
+
+CREATE TRIGGER update_learning_progress_timestamp BEFORE UPDATE ON learning_progress
+  FOR EACH ROW EXECUTE FUNCTION update_timestamp();
+
+CREATE TRIGGER update_clinical_logbook_entries_timestamp BEFORE UPDATE ON clinical_logbook_entries
   FOR EACH ROW EXECUTE FUNCTION update_timestamp();
 
 CREATE TRIGGER update_subjects_timestamp BEFORE UPDATE ON subjects

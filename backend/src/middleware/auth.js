@@ -19,16 +19,6 @@ module.exports = function authMiddleware(req, res, next) {
       if (err.name === "TokenExpiredError") {
         return res.status(401).json({ error: "Token has expired" });
       }
-      // In demo mode, allow any token with basic structure
-      try {
-        const decoded = jwt.decode(token);
-        if (decoded && decoded.id) {
-          req.user = decoded;
-          return next();
-        }
-      } catch (decodeErr) {
-        // Fall through to error
-      }
       res.status(401).json({ error: "Invalid or malformed token" });
     }
   } catch (err) {

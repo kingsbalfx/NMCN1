@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const pool = require("../../config/db");
+const auth = require("../../middleware/auth");
 
 const router = express.Router();
 
@@ -21,7 +22,10 @@ const demoUsers = {
     username: "kingsbalfx",
     email: "demo@kingsbal.com",
     password: "password123",
-    role: "student"
+    role: "student",
+    has_paid: true,
+    permanent_access: true,
+    device_id: null
   },
   "admin@kingsbal.com": {
     id: 2,
@@ -29,9 +33,54 @@ const demoUsers = {
     username: "admin",
     email: "admin@kingsbal.com",
     password: "014/Pt/014",
-    role: "admin"
+    role: "admin",
+    has_paid: true,
+    permanent_access: true,
+    device_id: null
   }
 };
+
+function getDeviceInfo(req) {
+  return {
+    device_id: req.body?.device_id || req.headers["x-device-id"] || null,
+    device_name: req.body?.device_name || req.headers["x-device-name"] || req.headers["user-agent"] || null
+  };
+}
+
+function publicUser(user) {
+  return {
+    id: user.id,
+    full_name: user.full_name,
+    username: user.username,
+    email: user.email,
+    role: user.role,
+    has_paid: Boolean(user.has_paid),
+    permanent_access: Boolean(user.permanent_access),
+    device_bound: Boolean(user.device_id),
+    avatar_gender: user.avatar_gender || null,
+    avatar_style: user.avatar_style || null
+  };
+}
+
+function bindDemoDevice(user, req) {
+  const { device_id, device_name } = getDeviceInfo(req);
+  if (!device_id) return null;
+
+  if (user.device_id && user.device_id !== device_id) {
+    return {
+      status: 403,
+      error: "This account is already linked to another phone. Contact admin to reset device access."
+    };
+  }
+
+  if (!user.device_id) {
+    user.device_id = device_id;
+    user.device_name = device_name;
+    user.device_bound_at = new Date().toISOString();
+  }
+
+  return null;
+}
 
 // Cookie options for login token
 const cookieOptions = {
@@ -63,10 +112,20 @@ router.post("/register", async (req, res) => {
         return res.status(409).json({ error: "Email already registered (demo mode)" });
       }
       const newId = Math.max(...Object.values(demoUsers).map(u => u.id)) + 1;
-      demoUsers[email] = { id: newId, full_name, username, email, password, role: "student" };
+      demoUsers[email] = {
+        id: newId,
+        full_name,
+        username,
+        email,
+        password,
+        role: "student",
+        has_paid: false,
+        permanent_access: false,
+        device_id: null
+      };
       return res.status(201).json({
-        message: "Registered successfully (demo mode)",
-        user: { id: newId, full_name, username, email }
+        message: "Registered successfully (demo mode). Complete the one-time NGN 450 payment to unlock learning.",
+        user: publicUser(demoUsers[email])
       });
     }
 
@@ -79,11 +138,16 @@ router.post("/register", async (req, res) => {
 
       const hash = await bcrypt.hash(password, 10);
       const result = await pool.query(
-        "INSERT INTO users(full_name, username, email, password_hash) VALUES($1, $2, $3, $4) RETURNING id, full_name, username, email",
+        `INSERT INTO users(full_name, username, email, password_hash, role, has_paid, permanent_access)
+         VALUES($1, $2, $3, $4, 'student', false, false)
+         RETURNING id, full_name, username, email, role, has_paid, permanent_access, device_id`,
         [full_name, username, email, hash]
       );
 
-      res.status(201).json({ message: "Registered successfully", user: result.rows[0] });
+      res.status(201).json({
+        message: "Registered successfully. Complete the one-time NGN 450 payment to unlock learning.",
+        user: publicUser(result.rows[0])
+      });
     } catch (dbErr) {
       console.error("Database registration error:", dbErr.message);
       res.status(500).json({ error: "Registration failed - database error" });
@@ -99,7 +163,8 @@ router.post("/register", async (req, res) => {
  */
 router.post("/login", async (req, res) => {
   try {
-    const { username_or_email, password } = req.body;
+    const username_or_email = req.body.username_or_email || req.body.email || req.body.username;
+    const { password } = req.body;
 
     if (!username_or_email || !password) {
       return res.status(400).json({ error: "username_or_email and password are required" });
@@ -115,8 +180,13 @@ router.post("/login", async (req, res) => {
         });
       }
 
+      const deviceError = bindDemoDevice(user, req);
+      if (deviceError) {
+        return res.status(deviceError.status).json({ error: deviceError.error });
+      }
+
       const token = jwt.sign(
-        { id: user.id, role: user.role },
+        { id: user.id, role: user.role, has_paid: user.has_paid, permanent_access: user.permanent_access },
         process.env.JWT_SECRET || "demo-secret-key",
         { expiresIn: "7d" }
       );
@@ -126,13 +196,7 @@ router.post("/login", async (req, res) => {
       return res.json({
         message: "Login successful (demo mode)",
         token,
-        user: {
-          id: user.id,
-          full_name: user.full_name,
-          username: user.username,
-          email: user.email,
-          role: user.role
-        }
+        user: publicUser(user)
       });
     }
 
@@ -149,8 +213,28 @@ router.post("/login", async (req, res) => {
         return res.status(401).json({ error: "Invalid login credentials" });
       }
 
+      const { device_id, device_name } = getDeviceInfo(req);
+      const dbUser = user.rows[0];
+
+      if (device_id) {
+        if (dbUser.device_id && dbUser.device_id !== device_id) {
+          return res.status(403).json({
+            error: "This account is already linked to another phone. Contact admin to reset device access."
+          });
+        }
+
+        if (!dbUser.device_id) {
+          await pool.query(
+            "UPDATE users SET device_id=$1, device_name=$2, device_bound_at=NOW(), updated_at=NOW() WHERE id=$3",
+            [device_id, device_name, dbUser.id]
+          );
+          dbUser.device_id = device_id;
+          dbUser.device_name = device_name;
+        }
+      }
+
       const token = jwt.sign(
-        { id: user.rows[0].id, role: user.rows[0].role },
+        { id: dbUser.id, role: dbUser.role, has_paid: dbUser.has_paid, permanent_access: dbUser.permanent_access },
         process.env.JWT_SECRET,
         { expiresIn: "7d" }
       );
@@ -161,11 +245,7 @@ router.post("/login", async (req, res) => {
         message: "Login successful",
         token,
         user: {
-          id: user.rows[0].id,
-          full_name: user.rows[0].full_name,
-          username: user.rows[0].username,
-          email: user.rows[0].email,
-          role: user.rows[0].role
+          ...publicUser(dbUser)
         }
       });
     } catch (dbErr) {
@@ -181,7 +261,7 @@ router.post("/login", async (req, res) => {
 /**
  * Get current user
  */
-router.get("/me", async (req, res) => {
+router.get("/me", auth, async (req, res) => {
   try {
     const userId = req.user?.id;
     if (!userId) {
@@ -194,16 +274,19 @@ router.get("/me", async (req, res) => {
       if (!user) {
         return res.status(404).json({ error: "User not found (demo mode)" });
       }
-      return res.json({ user: { id: user.id, full_name: user.full_name, email: user.email, role: user.role } });
+      return res.json({ user: publicUser(user) });
     }
 
     // Database mode
     try {
-      const user = await pool.query("SELECT id, full_name, email, role FROM users WHERE id=$1", [userId]);
+      const user = await pool.query(
+        "SELECT id, full_name, username, email, role, has_paid, permanent_access, device_id FROM users WHERE id=$1",
+        [userId]
+      );
       if (!user.rows.length) {
         return res.status(404).json({ error: "User not found" });
       }
-      res.json({ user: user.rows[0] });
+      res.json({ user: publicUser(user.rows[0]) });
     } catch (dbErr) {
       console.error("Database error:", dbErr.message);
       res.status(500).json({ error: "Failed to fetch user - database error" });

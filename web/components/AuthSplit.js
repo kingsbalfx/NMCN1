@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { supabase } from '../services/supabaseClient';
 import toast from 'react-hot-toast';
+import api from '../services/api';
 
 const years = [
   { value: '1', label: 'Year 1' },
@@ -19,24 +19,19 @@ export default function AuthSplit({ onSignedIn }) {
   const signUp = async () => {
     setLoading(true);
     try {
-      const { error } = await supabase.auth.signUp({
+      const username = form.email.split('@')[0].replace(/[^a-zA-Z0-9_]/g, '') || `student${Date.now()}`;
+      const res = await api.post('/auth/register', {
+        full_name: form.full_name,
+        username,
         email: form.email,
         password: form.password,
-      }, {
-        data: {
-          full_name: form.full_name,
-          school_name: form.school_name,
-          year_of_study: form.year_of_study,
-          clinical_xp: 0,
-          role: 'STUDENT',
-        },
       });
 
-      if (error) throw error;
-      toast.success('Account created. Redirecting to Year 1 dashboard...');
-      window.location.href = '/dashboard';
+      if (res.data?.token) localStorage.setItem('token', res.data.token);
+      toast.success('Account created. Complete payment to unlock your missions.');
+      window.location.href = '/subscribe';
     } catch (error) {
-      toast.error(error.message || 'Signup failed');
+      toast.error(error?.response?.data?.error || error.message || 'Signup failed');
     } finally {
       setLoading(false);
     }
@@ -45,26 +40,27 @@ export default function AuthSplit({ onSignedIn }) {
   const login = async () => {
     setLoading(true);
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: form.email,
-        password: form.password,
-      });
-      if (error) throw error;
-
       if (form.email === process.env.NEXT_PUBLIC_SUPER_ADMIN_EMAIL) {
-        await fetch('/api/supabase-super-admin', {
+        const adminRes = await fetch('/api/supabase-super-admin', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: form.email, password: form.password }),
         });
+        if (!adminRes.ok) throw new Error('Super admin login failed');
         window.location.href = '/admin/users';
         return;
       }
 
+      const res = await api.post('/auth/login', {
+        username_or_email: form.email,
+        password: form.password,
+      });
+
+      if (res.data?.token) localStorage.setItem('token', res.data.token);
       toast.success('Welcome back! Redirecting to your clinical dashboard...');
-      window.location.href = '/dashboard';
+      window.location.href = res.data?.user?.permanent_access ? '/dashboard' : '/subscribe';
     } catch (error) {
-      toast.error(error.message || 'Login failed');
+      toast.error(error?.response?.data?.error || error.message || 'Login failed');
     } finally {
       setLoading(false);
     }

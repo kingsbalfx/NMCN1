@@ -10,6 +10,7 @@ const assert = require('assert');
 const BASE_URL = 'http://localhost:5000/api';
 const testUser = {
   full_name: 'Test Student',
+  username: `teststudent${Date.now()}`,
   email: `teststudent${Date.now()}@test.com`,
   password: 'testpass123'
 };
@@ -94,7 +95,7 @@ async function main() {
   // Test 4: Initiate payment
   total++;
   if (await test('POST /payments/initiate (demo mode)', async () => {
-    const res = await request('POST', '/payments/initiate', { amount: 1200 });
+    const res = await request('POST', '/payments/initiate');
     assert.strictEqual(res.status, 200, `Expected 200, got ${res.status}`);
     assert(res.data.status === 'success' || res.data.reference, 'Payment reference not returned');
   })) passed++;

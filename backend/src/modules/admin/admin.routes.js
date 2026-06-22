@@ -228,7 +228,10 @@ router.delete("/subjects/:id", auth, admin, async (req, res) => {
 router.get("/users", auth, admin, async (req, res) => {
   try {
     const users = await pool.query(
-      "SELECT id, full_name, email, role, subscription_expiry, last_login, is_active, created_at FROM users ORDER BY created_at DESC"
+      `SELECT id, full_name, username, email, role, has_paid, permanent_access, paid_at,
+              payment_reference, device_id, device_name, device_bound_at,
+              subscription_expiry, last_login, is_active, created_at
+       FROM users ORDER BY created_at DESC`
     );
     res.json(users.rows);
   } catch (err) {
@@ -238,25 +241,37 @@ router.get("/users", auth, admin, async (req, res) => {
 });
 
 /**
- * MANUAL UPGRADE USER SUBSCRIPTION
+ * MANUAL GRANT PERMANENT USER ACCESS
  */
 router.post("/users/:id/upgrade", auth, admin, async (req, res) => {
   try {
     const { id } = req.params;
-    const { months = 1 } = req.body;
-
-    const expiry = new Date();
-    expiry.setMonth(expiry.getMonth() + months);
 
     await pool.query(
-      "UPDATE users SET subscription_expiry = $1 WHERE id = $2",
-      [expiry, id]
+      "UPDATE users SET has_paid=true, permanent_access=true, paid_at=COALESCE(paid_at, NOW()), updated_at=NOW() WHERE id=$1",
+      [id]
     );
 
-    res.json({ message: "User subscription upgraded successfully", expiry });
+    res.json({ message: "Permanent access granted successfully" });
   } catch (err) {
-    console.error("User upgrade error:", err.message);
+    console.error("User access grant error:", err.message);
     res.status(500).json({ error: "Failed to upgrade user" });
+  }
+});
+
+router.post("/users/:id/reset-device", auth, admin, async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await pool.query(
+      "UPDATE users SET device_id=NULL, device_name=NULL, device_bound_at=NULL, updated_at=NOW() WHERE id=$1",
+      [id]
+    );
+
+    res.json({ message: "Device lock reset successfully" });
+  } catch (err) {
+    console.error("Device reset error:", err.message);
+    res.status(500).json({ error: "Failed to reset device" });
   }
 });
 
@@ -300,6 +315,67 @@ router.get("/analytics", auth, admin, async (req, res) => {
   } catch (err) {
     console.error("Analytics error:", err.message);
     res.status(500).json({ error: "Failed to fetch analytics" });
+  }
+});
+
+router.get("/clinical-logbook", auth, admin, async (req, res) => {
+  try {
+    if (pool.isDemoMode) {
+      return res.json([
+        {
+          id: 1,
+          student_name: "Demo User",
+          procedure_name: "Vital signs monitoring",
+          category: "Basic Nursing Procedures",
+          status: "submitted",
+          performed_at: new Date().toISOString().slice(0, 10)
+        }
+      ]);
+    }
+
+    const result = await pool.query(
+      `SELECT l.id, u.full_name AS student_name, u.email, l.procedure_name, l.category,
+              l.performed_at, l.reflection, l.supervisor_name, l.status, l.created_at
+       FROM clinical_logbook_entries l
+       JOIN users u ON u.id = l.user_id
+       ORDER BY l.created_at DESC
+       LIMIT 100`
+    );
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Clinical logbook fetch error:", err.message);
+    res.status(500).json({ error: "Failed to fetch clinical logbook entries" });
+  }
+});
+
+router.post("/clinical-logbook/:id/status", auth, admin, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+    const allowed = ["submitted", "approved", "rejected"];
+
+    if (!allowed.includes(status)) {
+      return res.status(400).json({ error: "status must be submitted, approved, or rejected" });
+    }
+
+    if (pool.isDemoMode) {
+      return res.json({ message: `Logbook entry ${status} (demo mode)`, id, status });
+    }
+
+    const result = await pool.query(
+      "UPDATE clinical_logbook_entries SET status=$1, updated_at=NOW() WHERE id=$2 RETURNING id, status",
+      [status, id]
+    );
+
+    if (!result.rows.length) {
+      return res.status(404).json({ error: "Logbook entry not found" });
+    }
+
+    res.json({ message: "Logbook status updated", entry: result.rows[0] });
+  } catch (err) {
+    console.error("Clinical logbook status error:", err.message);
+    res.status(500).json({ error: "Failed to update logbook status" });
   }
 });
 
